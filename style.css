@@ -3,6 +3,7 @@
     height: 20px;;
 }
 #root {
+    border-bottom: 2px dashed black  ;
     /* height: 320px; */
 }
 
