@@ -18,7 +18,7 @@
     /* transform: scaleY(-1); */
   }
   
-  @keyframes flicker {
+  /* @keyframes flicker {
     0% {
       opacity: 1;
     }
@@ -40,7 +40,7 @@
   
   .fire-char-intensity-3 {
     color: black;
-  }
+  } */
 
   /* body,
 table,
