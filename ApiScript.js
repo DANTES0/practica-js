@@ -1,3 +1,7 @@
+// import {circle} from './Circle'
+
+// let circle = require('./Circle')
+
 // let EnglishWord = 'read'
 
 
@@ -239,12 +243,56 @@ const fact = async() => {
 
 
 
+//********************************************************************************************************************************************************************* */
 
+class Circle {
+    color = 'red';
+    node = 'game-container'
+    constructor (node, color) {
+        this.color = color
+        this.node = node
+        this.createCircle()
+    }
+
+    createCircle () {
+        const circle = document.createElement('div')
+        circle.style.height = '50px'
+        circle.style.width = '50px'
+        circle.style.backgroundColor = this.color
+        circle.style.borderRadius = '50%'
+        circle.setAttribute('class', 'circle')
+        this.node.appendChild(circle)
+    }
+}
+
+function abc(node) {
+    new Circle(node)
+}
+
+function ddd(node) {
+    setTimeout(() => abc(node), 2000)
+}
+const node = document.querySelector(".game-container");
+// setInterval(() => ddd(node), 200)
+
+// ddd(node)
+
+// new Circle(node)
+// setInterval(abc(node), 200)
+// setInterval(abc(node), 200)
+// setInterval(abc(node), 200)
+// setInterval(abc(node), 200)
+// setInterval(abc(node), 200)
 
 document.addEventListener("DOMContentLoaded", function() {
-    const circle = document.querySelector(".circle");
+    
     const gameContainer = document.querySelector(".game-container");
     const scoreZone = document.querySelector(".score-zone");
+    
+    new Circle(node, 'blue')
+
+    const circle = document.querySelector(".circle");
+//    const circle = new Circle(node, 'red') 
   
     let score = 0;
     let gameStarted = false;
@@ -295,11 +343,11 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Score: " + score);
           }
 
-        // if (circleRect.right <= gameContainer.right ){
-        //     score--;
-        //     console.log("Score: " + score);
-        // }
           circle.style.display = "none"; // Скрываем круг при клике
+
+          if(circleRect.right > scoreZoneRect.right) {
+            circle.style.display = "none";
+          }
   
           setTimeout(function() {
             circle.style.display = "block"; // Показываем круг снова
@@ -312,3 +360,69 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+
+//*********************************************************************************************************************** */
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const gameContainer = document.querySelector(".game-container");
+//     const scoreZone = document.querySelector(".score-zone");
+//     let score = 0;
+//     let gameStarted = false;
+  
+//     gameContainer.addEventListener("click", function(event) {
+//       if (!gameStarted) {
+//         gameStarted = true;
+//         console.log("Game started!");
+//         createCircle();
+//       } else {
+//         const clickX = event.clientX - gameContainer.getBoundingClientRect().left;
+//         const clickY = event.clientY - gameContainer.getBoundingClientRect().top;
+  
+//         const scoreZoneRect = scoreZone.getBoundingClientRect();
+  
+//         const isInsideGameContainer =
+//           clickX >= gameContainer.offsetLeft &&
+//           clickX <= gameContainer.offsetLeft + gameContainer.offsetWidth &&
+//           clickY >= gameContainer.offsetTop &&
+//           clickY <= gameContainer.offsetTop + gameContainer.offsetHeight;
+  
+//         const isInsideScoreZone =
+//           clickX >= scoreZoneRect.left &&
+//           clickX <= scoreZoneRect.right &&
+//           clickY >= scoreZoneRect.top &&
+//           clickY <= scoreZoneRect.bottom;
+  
+//         if (isInsideGameContainer) {
+//           if (isInsideScoreZone) {
+//             score++;
+//             console.log("Score: " + score);
+//           }
+//         }
+//       }
+//     });
+  
+//     function createCircle() {
+//       const circle = document.createElement("div");
+//       circle.classList.add("circle");
+//       gameContainer.appendChild(circle);
+  
+//       circle.addEventListener("animationiteration", function() {
+//         if (gameStarted) {
+//           const circleRect = circle.getBoundingClientRect();
+//           const scoreZoneRect = scoreZone.getBoundingClientRect();
+  
+//           if (circleRect.right >= gameContainer.getBoundingClientRect().right) {
+//             if (
+//               circleRect.right >= scoreZoneRect.left &&
+//               circleRect.right <= scoreZoneRect.right &&
+//               circleRect.top >= scoreZoneRect.top &&
+//               circleRect.bottom <= scoreZoneRect.bottom
+//             ) {
+//               score--;
+//               console.log("Score: " + score);
+//             }
+//           }
+//         }
+//       });
+//     }
+//   });
