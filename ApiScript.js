@@ -74,7 +74,8 @@ const fetchData = async () => {
     console.log(mp4)
     console.log(poster)
 
-    pump.innerHTML = `<img src ="${poster}"/>`
+    pump.innerHTML = `<img class ="image" src ="${poster}"/>
+    <video controls src = "${mp4}" type=video/mp4/>`
 
     word.value =""
 };
@@ -112,7 +113,7 @@ const fetchDataEnglish = async() => {
 }
 
 const buttonClick = document.getElementById("input")
-buttonClick.addEventListener('click', fetchData)
+// buttonClick.addEventListener('click', fetchData)
 // word.value=""
 // buttonClick.setAttribute('value', "")
 
@@ -238,3 +239,76 @@ const fact = async() => {
 
 
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const circle = document.querySelector(".circle");
+    const gameContainer = document.querySelector(".game-container");
+    const scoreZone = document.querySelector(".score-zone");
+  
+    let score = 0;
+    let gameStarted = false;
+  
+    circle.addEventListener("animationiteration", function() {
+      if (gameStarted && circle.style.display!='none') {
+        score--;
+        console.log("Score: " + score);
+      }
+    });
+  
+    gameContainer.addEventListener("click", function(event) {
+      if (!gameStarted) {
+        gameStarted = true;
+        console.log("Game started!");
+      } else {
+        const circleRect = circle.getBoundingClientRect();
+        const clickX = event.clientX - gameContainer.getBoundingClientRect().left;
+        const clickY = event.clientY - gameContainer.getBoundingClientRect().top;
+  
+        const scoreZoneRect = scoreZone.getBoundingClientRect();
+  
+        const isInsideGameContainer =
+          clickX >= gameContainer.offsetLeft &&
+          clickX <= gameContainer.offsetLeft + gameContainer.offsetWidth &&
+          clickY >= gameContainer.offsetTop &&
+          clickY <= gameContainer.offsetTop + gameContainer.offsetHeight;
+  
+        const isInsideScoreZone =
+          clickX >= scoreZoneRect.left &&
+          clickX <= scoreZoneRect.right &&
+          clickY >= scoreZoneRect.top &&
+          clickY <= scoreZoneRect.bottom;
+  
+        const isInsideCircle =
+          clickX >= circleRect.left &&
+          clickX <= circleRect.right &&
+          clickY >= circleRect.top &&
+          clickY <= circleRect.bottom;
+  
+        // Проверяем, находится ли клик внутри зоны для подсчета очков, в пределах game-container и внутри кружка
+        if (isInsideGameContainer && circleRect.right <= gameContainer.getBoundingClientRect().right) {
+          if (circleRect.left > scoreZoneRect.left && circleRect.right < scoreZoneRect.right) {
+            score++;
+            console.log("Score: " + score);
+          } else {
+            score--;
+            console.log("Score: " + score);
+          }
+
+        // if (circleRect.right <= gameContainer.right ){
+        //     score--;
+        //     console.log("Score: " + score);
+        // }
+          circle.style.display = "none"; // Скрываем круг при клике
+  
+          setTimeout(function() {
+            circle.style.display = "block"; // Показываем круг снова
+            circle.style.left = "0"; // Перемещаем круг влево
+          }, 500); // Задержка в миллисекундах перед появлением круга
+        } else if (circleRect.right >= gameContainer.getBoundingClientRect().right) {
+            score--;
+            console.log("Score: " + score);
+          }
+      }
+    });
+  });

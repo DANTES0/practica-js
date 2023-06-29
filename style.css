@@ -1,3 +1,6 @@
+body {
+  background-color: grey;
+}
 .input {
     width: 50px;
     height: 20px;;
@@ -74,4 +77,45 @@ address {
 	right: 10px;
 	text-align: right;
 } */
-  
+.image {
+  /* background-color: aqua; */
+  /* filter: invert(99%) sepia(44%) saturate(0%) hue-rotate(56deg) brightness(110%) contrast(101%); */
+}
+
+.game-container {
+  width: 400px;
+  height: 400px;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+.score-zone {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 255, 0, 0.5); /* Задайте цвет и прозрачность по вашему усмотрению */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: moveCircle 1s linear infinite;
+}
+
+@keyframes moveCircle {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 50px);
+  }
+}
