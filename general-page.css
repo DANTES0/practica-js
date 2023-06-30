@@ -128,6 +128,7 @@ address {
 
 .fire {
     position: relative;
+    top: 65px;
     height: 300px;
     width: 100%;
     word-wrap: break-word;
