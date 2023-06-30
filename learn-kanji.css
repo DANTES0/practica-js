@@ -1,0 +1,136 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.page-name{
+    color: #FFF;
+    font-size: 25px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30px; 
+}
+
+.menu{
+    color: #FFF;
+    text-align: right;
+    font-size: 30px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 17px 0 auto;
+}
+
+.menu-burger {
+    width: 39px;
+    height: 24px;
+    margin-right: 17px;
+    margin-bottom: 10px;
+}
+
+.nav-bar{
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    /* margin-top: 22px; */
+    top: 0;
+    height: 64px;
+    border-bottom: 1px white solid;
+    background-color: black;
+}
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px #FFF solid;
+    /* margin-top: 14px; */
+}
+.animation {
+    width: 402px;
+    height: 280px;
+    /* border-right: #FFF solid 1px; */
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.text-main {
+    width: 100%;
+    height: 280px;
+    color: #FFF;
+    font-size: 11px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 10px;
+    padding-top: 14px;
+}
+
+.white-line{
+    height: 294px;
+    width: 1px;
+    background-color: #FFF;
+}
+
+hr {
+    position: sticky;
+    top: 40px;
+    color: white;
+    margin-bottom: 0;
+}
+.search-bar{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* margin-top: 14px; */
+    height: 45px;
+    border-bottom: 1px white solid;
+}
+.search-bar-name{
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30px; 
+}
+
+.search-bar-input{
+    background: url(./img/search_img.svg) no-repeat scroll 7px 7px;
+    background-position: 0% 50%;
+    /* background-color: transparent; */
+    background-size: 36px;
+    outline: none;
+    color: #FFF;
+    font-size: 15px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    border-radius: 15px;
+    border: #F08E8E 2px solid;
+    width: 90px;
+    padding: 0 40px;
+    margin-left: 23px;
+    height: 20px;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    color:    white;
+    font-weight: 700;
+    opacity: 1;
+ }
+
+ /* .search-bar-img{
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+ } */
