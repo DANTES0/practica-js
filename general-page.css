@@ -19,7 +19,7 @@ body{
 .info{
     position: relative;
     right: -20px; 
-    top: -152px; 
+    top: -250px; 
     height: 100px;
     width: 840px;
     color: rgb(0, 0, 0);
@@ -73,7 +73,7 @@ body{
 .menu{
     position: relative;
     right: 20px; 
-    top: 100px; 
+    top: 0px; 
     text-align: end;
 }
 
@@ -108,7 +108,7 @@ body{
 }
 pre {
 	font-weight: bold;
-    color: #232323;
+    color: #ac5858;
 }
 a {
 	/* color: #232323; */
@@ -127,7 +127,10 @@ address {
 }
 
 .fire {
-    width:100%;
+    position: relative;
+    height: 300px;
+    width: 100%;
     word-wrap: break-word;
     overflow:hidden;
+    user-select: none;
 }
