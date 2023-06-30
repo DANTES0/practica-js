@@ -120,3 +120,15 @@ address {
     left: calc(100% - 50px);
   }
 }
+
+.score-count {
+  font-family: Inter;
+  font-size: 60px;
+  color: white;
+}
+
+.start-game{
+  width: 100px;
+  height: 30px;
+  
+}
