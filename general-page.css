@@ -125,3 +125,9 @@ address {
 	right: 10px;
 	text-align: right;
 }
+
+.fire {
+    width:100%;
+    word-wrap: break-word;
+    overflow:hidden;
+}
