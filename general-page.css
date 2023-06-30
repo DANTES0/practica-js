@@ -91,3 +91,37 @@ body{
     list-style-type: none; 
     margin-bottom: 1em;
 }
+
+table,
+td,
+pre {
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+
+}
+body{
+	/* background: #000; */
+	/* color: #232323; */
+	height: 100%;
+	width: 100%;
+}
+pre {
+	font-weight: bold;
+    color: #232323;
+}
+a {
+	/* color: #232323; */
+}
+a:hover {
+	/* color: #232323; */
+}
+address {
+	/* background: #000; */
+	bottom: 10px;
+	font-family: Georgia, serif;
+	font-style: normal;
+	position: absolute;
+	right: 10px;
+	text-align: right;
+}
