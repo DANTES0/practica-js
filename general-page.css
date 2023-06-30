@@ -19,7 +19,7 @@ body{
 .info{
     position: relative;
     right: -20px; 
-    top: -250px; 
+    top: -100px; 
     height: 100px;
     width: 840px;
     color: rgb(0, 0, 0);
@@ -73,7 +73,7 @@ body{
 .menu{
     position: relative;
     right: 20px; 
-    top: 0px; 
+    top: 90px; 
     text-align: end;
 }
 
@@ -135,3 +135,50 @@ address {
     overflow:hidden;
     user-select: none;
 }
+
+.menu a {
+    text-shadow: 0px 0px salmon, 0px 0px salmon, 0px 0px salmon,  0px 0px salmon;
+  }
+
+.menu a:hover {
+    text-shadow: -1px -1px salmon, -2px -2px salmon, -3px -3px salmon, -4px -4px salmon;
+    transition: all 0.1s ease;
+ }
+/* .list_menu{
+    transform: translatex(-50%) translatey(-50%);
+  }
+
+a::after{
+content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+a:hover::after{
+    width: 100%;
+
+} */
+
+
+
+/* .menu .wvc a{
+    animation-name:wave-effect;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    display:inline-block;
+    font-weight:inherit;
+    font-style:inherit;
+  }
+  @keyframes wave-effect{
+    from {
+      transform:translate(0px, .5em);
+    }
+    to {
+      transform:translate(0px, -.5em);
+    }
+  } */
+

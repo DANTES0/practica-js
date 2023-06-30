@@ -21,3 +21,55 @@ function f()
   setTimeout(f, 30);
 }
 f();
+
+
+
+function revealText(text, selector, n_changes, duration_milliseconds, charset) {
+  let element = document.querySelector(selector)
+  let text_index = 0
+  let text_interval = setInterval(function() {
+    
+    let i = text_index
+    if (i >= text.length) {
+      clearInterval(text_interval)
+      return
+    }
+    
+    let span = document.createElement('span')
+    
+    if (text[i] == '\n' || text[i] == ' ') {
+      span.innerText = text[i]
+    } else {
+      span.innerText = charset[Math.floor(Math.random()*charset.length)]
+    }
+    span.style.opacity = '0.0'
+    element.appendChild(span)
+    span.style.transition = `all ${duration_milliseconds}ms ease-in`
+    
+    setTimeout(function() {
+      span.style.opacity = '1.0'
+      if (text[i] == '\n' || text[i] == ' ') return
+
+      let count = 0
+      let interval = setInterval(function() {
+
+        count += 1
+        if (count == n_changes) {
+          span.innerText = text[i]
+          clearInterval(interval)
+        } else {
+          span.innerText = charset[Math.floor(Math.random()*charset.length)]
+        }
+
+      }, duration_milliseconds/n_changes)
+    }, 30)
+    text_index += 1
+  }, 30)
+  
+}
+
+let alphabet = '一人七八九十入二三上下大女万土山千川子小くぞだなにねのぷゐゕ゜゜゜ィシ##**!!!&$$#^'
+
+let text = `Добро пожаловать на сайт с нетривиальной японской атмосферой! На этом сайте вы сможете проникнуться japonese internet vibe. Этот сайт наполнен интересным дизайном, разными фишками вперемешку с фактами о японской культуре. Вы познакомитесь с японской субкультурой аниме (отаку - яп. オタク), традиционными японскими барабанами (тайку - яп. 太鼓), японскими иероглифами (кандзи - яп. 漢字) и многое другое. `
+
+revealText(text, '.info', 5, 500, alphabet)
