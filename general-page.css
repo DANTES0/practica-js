@@ -99,12 +99,13 @@ body{
     font-family: Better VCR;
     font-style: normal;
     font-weight: 400;
-    line-height: normal; 
+    line-height: normal;
+    user-select: none; 
 }
 
 .menu li {
     list-style: none;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .list_menu {
     margin-top: 104px;
@@ -117,11 +118,14 @@ body{
     height: 433;
     text-align: left;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 22px;
     font-family: Better VCR;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     align-items: center;
     margin-top: 140px; 
+    margin-left: 88px;
+    text-indent: 40px;
+    user-select: none;
 }
