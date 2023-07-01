@@ -43,13 +43,13 @@ body{
 
 
 .marquee{
-    margin-top: 55px;
     white-space: nowrap;
     color: black;
-    text-shadow: 3px 4px 2px rgba(255, 205, 205, 0.25);
+    text-shadow: 3px 4px 2px #4273C1;
     -webkit-text-stroke: 0.4px #FFFFFF;
     font-size: 40px;
     user-select: none;
+    /* font-family: Inter; */
     font-family: Better VCR;
     /* font-family: Kanit; */
     font-style: normal;
@@ -110,6 +110,12 @@ body{
 pre {
 	font-weight: bold;
     color: #4273C1;
+}
+a {
+	/* color: #232323; */
+}
+a:hover {
+	/* color: #232323; */
 }
 address {
 	/* background: #000; */

@@ -88,7 +88,7 @@ body {
     font-size: 0;
     overflow: hidden;
     /* overflow-x: auto; */
-    overflow-y: auto;
+    /* overflow-y: auto; */
     transition: .5s all;
 }
 
@@ -101,7 +101,7 @@ body {
     border-bottom:  1px dashed white;
     background-color: black;
     color: #FFF;
-    font-size: 65px;
+    font-size: 63px;
     font-family: Better VCR;
     font-style: normal;
     font-weight: 400;
@@ -110,15 +110,6 @@ body {
     text-align: left;
     padding-left: 90px;
     /* padding-bottom: 40px; */
-}
-
-.burger-menu-text {
-    color: #4273C1;
-    font-size: 30px;
-    font-family: Better VCR;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal; 
 }
 
 #japan-flag {
@@ -239,7 +230,7 @@ hr {
     line-height: normal; 
     border-radius: 15px;
     border: #F08E8E 2px solid;
-    width: 90px;
+    width: 120px;
     padding: 0 40px;
     margin-left: 23px;
     height: 20px; 
