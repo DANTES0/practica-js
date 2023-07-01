@@ -265,17 +265,219 @@ hr {
 
 
  .kanji {
-    height: 200px;
+    display: flex;
+    flex-direction: row;
+    height: 250px;
     width: 100%;
     border-bottom: 1px white solid;
  }
 
  .kanji-word{
-    width: 200px;
+    width: 250px;
     height: 100%;
-    border-right: 1px solid white;
+    /* border-right: 1px solid white; */
+ }
+ .kanji-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 50px;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+ }
+
+ .kanji-name-character{
+    font-size: 40px;
+    margin-left: 10px;
+ }
+ .kanji-name-kanji {
+    margin-left: 10px;
  }
 
  .kanji-ul {
     margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
  }
+
+ .kanji-table-wrapper {
+    height: 200px;
+ }
+
+ .kanji-table {
+    height: 100%;
+    margin-top: 5px;
+ }
+
+ .kanji-table-name {
+    margin-left: 10px;
+    color: #F08E8E;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+ }
+
+ .kanji-list {
+    list-style-type: none
+ }
+
+ .kanji-about{
+    width: 100%;
+ }
+
+ .kanji-white-line {
+    height: 100%;
+    width: 1px;
+    background-color: white;
+ }
+
+ .kanji-about-wrapper {
+    width: 100%;
+    height: 250px
+ }
+.kanji-about-grammar-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: left;
+    height: 50px;
+}
+ .kanji-about-grammar {
+    height: 100%;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 35px;
+    margin-left: 70px;
+    margin-right: 50px; 
+ }
+.kanji-about-grammar-examples{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 30px;
+}
+ .kanji-about-grammar-steps{
+    height: 30px;
+    width: 30px;
+    /* filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%); */
+    /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+    filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(359deg) brightness(106%) contrast(103%);
+ }
+
+ .kanji-about-grammar-arrow {
+    color: #FFF;
+    font-size: 25px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+ }
+
+ .kanji-about-speaking {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 70px;
+    align-items: center;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+ }
+
+ .kanji-about-speaking-onyomi-wrapper{
+    display: flex;
+    flex-direction: row;
+ }
+
+ .kanji-about-speaking-konyomi-wrapper{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+ }
+
+ .kanji-about-speaking-onyomi-character{
+    margin-left: 30px;
+ }
+ .kanji-about-speaking-konyomi-character{
+    margin-left: 30px;
+ }
+
+ .kanji-about-audio-name-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 40px;
+ }
+
+ .kanji-about-audio{
+    height: 150px;
+ }
+
+ .kanji-about-audio-name {
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    margin-left: 70px;
+    height: 40px;
+    margin-top: 15px;
+ }
+
+ .kanji-about-audio-examples-wrapper{
+    height: 115px;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.kanji-about-audio-examples-text-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanji-about-audio-examples-text-column-examples{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.kanji-about-audio-examples-play{
+    width: 40px;
+    height: 40px;
+    background: url(../img/play-sound.svg);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

@@ -43,10 +43,6 @@ const fetchData = async () => {
     const data = await response.json();
     console.log(data[0].kanji.character)
 
-    // const {
-    //     character
-    // } = data[0].kanji
-
     console.log(data[0].kanji.character);
 
     store = {
