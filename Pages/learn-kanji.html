@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="learn-kanji.css">
+    <link rel="stylesheet" href="../Styles/learn-kanji.css">
     <title>Document</title>
     <div class="nav-bar">
-        <div class="page-name">Изучение японских иероглифов</div>
-        <div class="menu">Меню</div>
-        <a href="general-page.html" class="menu-burger"><img src="./img/burger.svg"></a>
+        <img src="../img/japan-flag.svg" id="japan-flag">
+        <input type="checkbox" id="check-menu">
+        <div class="page-name" id="page-name">Изучение японских иероглифов</div>
+        
+        <label for="check-menu" class="menu">Меню</label>
+        
+        <!-- <a href="general-page.html" class="menu-burger"><img src="./img/burger.svg"></a> -->
+        <div for="check-menu" class="burger-line-wrapper">
+            <div class="burger-line first" id="first"></div>   
+            <div class="burger-line second"></div>  
+            <div class="burger-line third"></div>   
+            <div class="burger-line fourth"></div>   
+        </div>
+        <nav class="burger-menu">
+            <a href="../Pages/general-page.html" class="burger-menu-nav first-nav">Главная страница</a>
+            <a href="#" class="burger-menu-nav">Факты о Японии</a>
+            <a href="#" class="burger-menu-nav">Игра тайко (太鼓)</a>
+            <a href="#" class="burger-menu-nav">Аниме арты</a>
+            <a href="#" class="burger-menu-nav">Изучение японских иероглифов</a>
+            <a href="#" class="burger-menu-nav last-nav">Клинок, рассекающий демонов</a>
+        </nav>
     </div>
 </head>
 <body>
@@ -16,7 +34,7 @@
     <!-- <hr> -->
 
     <div class="text-container">
-        <img src="./img/planet.gif" class="animation">
+        <img src="../img/planet.gif" class="animation">
         <div class="white-line"></div>
         <div class="text-main">Кандзи (漢字, букв. «Буквы (династии) Хань») — китайские иероглифы, используемые в японской письменности в основном для записи имён существительных, основ глаголов и прилагательных, а также японских имён собственных. Первые китайские тексты были завезены в Японию буддийскими монахами из корейского королевства Пэкче в V веке н. э. Сегодня наряду с исконно китайскими иероглифами используются знаки, изобретённые в самой Японии: так называемые кокудзи.
             В зависимости от того, каким путём кандзи попал в японский язык, иероглифы могут использоваться для написания одного или разных слов или, ещё чаще, морфем. С точки зрения читателя это означает, что кандзи имеют одно или несколько чтений. Выбор чтения иероглифа зависит от контекста, сочетания с другими кандзи, места в предложении и т. д. Некоторые часто используемые кандзи имеют десять или больше различных чтений.
@@ -33,9 +51,12 @@
 
     <div class="search-bar">
         <div class="search-bar-name">Введите английское слово или иероглиф</div>
-        <input class="search-bar-input" placeholder="поиск..."/>
+        <div class ="search-bar-input-wrapper">
+            <input class="search-bar-input" id="search-bar-input" placeholder="поиск..."/>
+            <!-- <button class="search-bar-input-button"></button> -->
+        </div>
 
     </div>
-    
+    <script src="../Scripts/learn-kanji.js"></script>
 </body>
 </html>

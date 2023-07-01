@@ -1,0 +1,273 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.page-name{
+    color: #FFF;
+    font-size: 25px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30px; 
+}
+
+.menu{
+    color: #FFF;
+    text-align: right;
+    font-size: 30px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 17px 0 auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-burger {
+    width: 39px;
+    height: 24px;
+    margin-right: 17px;
+    margin-bottom: 10px;
+}
+
+#check-menu {
+    display: none;
+}
+
+.burger-line {
+    width: 40px;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    transition: .5s all;
+}
+.first {
+    /* margin-top: 15px; */
+    top:20px
+}
+
+.second{
+    top:30px
+}
+.third {
+    /* margin-bottom: 15px; */
+    top:40px
+}
+
+.fourth {
+    top:30px
+}
+
+
+.burger-line-wrapper {
+    position: relative;
+    width: 35px;
+    height: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.burger-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    transform:translateY(100%);
+    bottom: 0;
+    left: 0;
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    /* overflow-x: auto; */
+    overflow-y: auto;
+    transition: .5s all;
+}
+
+.burger-menu-nav{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    /* color: white; */
+    text-decoration: none;
+    border-bottom:  1px dashed white;
+    background-color: black;
+    color: #FFF;
+    font-size: 65px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* margin-left: 50px;  */
+    text-align: left;
+    padding-left: 90px;
+    /* padding-bottom: 40px; */
+}
+
+.burger-menu-text {
+    color: #4273C1;
+    font-size: 30px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+#japan-flag {
+    margin-left: 8px;
+    display: none;
+    width: 48px;
+    height: 48px;
+}
+
+.last-nav {
+    border: none;
+}
+
+
+#check-menu:checked ~ .burger-menu{
+    max-height: 100vh;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .burger-line-wrapper .first {
+    display: none;
+}
+#check-menu:checked ~.burger-line-wrapper .second {
+    transform: rotate(45deg);
+    /* width: 45px; */
+    /* left: 10px; */
+}
+#check-menu:checked ~.burger-line-wrapper  .third {
+    display: none;
+}
+#check-menu:checked ~.burger-line-wrapper  .fourth {
+    transform: rotate(-45deg);
+}
+
+
+.nav-bar{
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    /* margin-top: 22px; */
+    top: 0;
+    height: 64px;
+    border-bottom: 1px white solid;
+    background-color: black;
+}
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px #FFF solid;
+    /* margin-top: 14px; */
+}
+.animation {
+    width: 402px;
+    height: 300px;
+    /* border-right: #FFF solid 1px; */
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.text-main {
+    width: 100%;
+    height: 300px;
+    color: #FFF;
+    font-size: 11px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 10px;
+    padding-top: 14px;
+    overflow: auto;
+}
+
+.white-line{
+    height: 314px;
+    width: 1px;
+    background-color: #FFF;
+}
+
+hr {
+    position: sticky;
+    top: 40px;
+    color: white;
+    margin-bottom: 0;
+}
+.search-bar{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* margin-top: 14px; */
+    height: 45px;
+    border-bottom: 1px white solid;
+}
+.search-bar-name{
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30px; 
+    /* position: relative; */
+}
+
+.search-bar-input{
+    background: url(../img/search_img.svg) no-repeat scroll 7px 7px;
+    background-position: 0% 50%;
+    /* background-color: transparent; */
+    background-size: 36px;
+    outline: none;
+    color: #FFF;
+    font-size: 15px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    border-radius: 15px;
+    border: #F08E8E 2px solid;
+    width: 90px;
+    padding: 0 40px;
+    margin-left: 23px;
+    height: 20px; 
+}
+
+.search-bar-input-button {
+    width: 36px;
+    height: 36px;
+    background: url(../img/search_img.svg);
+    background-position: 0%;
+    background-size: 36px;
+    border: none;
+    margin-left: 24px;
+    cursor: pointer;
+    /* position: relative; */
+}
+
+
+.search-bar-input-wrapper {
+    width: 100%px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+}
+
+::placeholder { /* Most modern browsers support this now. */
+    color:    white;
+    font-weight: 700;
+    opacity: 1;
+ }
