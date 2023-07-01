@@ -185,7 +185,7 @@ body {
     padding-left: 10px;
 }
 .text-main-anime {
-    width: 100%;
+    width: 95%;
     height: 50%;
     color: #FFF;
     font-size: 18px;
@@ -194,8 +194,9 @@ body {
     font-weight: 400;
     line-height: normal;
     padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-bottom: 20px;
+    /* padding-right: 20px; */
+    /* padding-left: 20px; */
     /* word-wrap: break-word;
     overflow: auto; */
 }
@@ -247,6 +248,14 @@ hr {
     padding-top: 15px;
     height: 400px;
 
+}
+
+.text-main-anime-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 
