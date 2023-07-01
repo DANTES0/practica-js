@@ -1,0 +1,256 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.page-name{
+    color: #FFF;
+    font-size: 25px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30px; 
+}
+
+.menu{
+    color: #FFF;
+    text-align: right;
+    font-size: 30px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 17px 0 auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-burger {
+    width: 39px;
+    height: 24px;
+    margin-right: 17px;
+    margin-bottom: 10px;
+}
+
+#check-menu {
+    display: none;
+}
+
+.burger-line {
+    width: 40px;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    transition: .5s all;
+}
+.first {
+    /* margin-top: 15px; */
+    top:20px
+}
+
+.second{
+    top:30px
+}
+.third {
+    /* margin-bottom: 15px; */
+    top:40px
+}
+
+.fourth {
+    top:30px
+}
+
+
+.burger-line-wrapper {
+    position: relative;
+    width: 35px;
+    height: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.burger-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    transform:translateY(100%);
+    bottom: 0;
+    left: 0;
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    /* overflow-x: auto; */
+    /* overflow-y: auto; */
+    transition: .5s all;
+}
+
+.burger-menu-nav{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    /* color: white; */
+    text-decoration: none;
+    border-bottom:  1px dashed white;
+    background-color: black;
+    color: #FFF;
+    font-size: 63px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* margin-left: 50px;  */
+    text-align: left;
+    padding-left: 90px;
+    /* padding-bottom: 40px; */
+}
+
+#japan-flag {
+    margin-left: 8px;
+    display: none;
+    width: 48px;
+    height: 48px;
+}
+
+.last-nav {
+    border: none;
+}
+
+
+#check-menu:checked ~ .burger-menu{
+    max-height: 100vh;
+    font-size: 16px;
+}
+
+#check-menu:checked ~ .burger-line-wrapper .first {
+    display: none;
+}
+#check-menu:checked ~.burger-line-wrapper .second {
+    transform: rotate(45deg);
+    /* width: 45px; */
+    /* left: 10px; */
+}
+#check-menu:checked ~.burger-line-wrapper  .third {
+    display: none;
+}
+#check-menu:checked ~.burger-line-wrapper  .fourth {
+    transform: rotate(-45deg);
+}
+
+
+.nav-bar{
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    /* margin-top: 22px; */
+    top: 0;
+    height: 64px;
+    border-bottom: 1px white solid;
+    background-color: black;
+}
+
+
+.container-anime1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    /* border-right: 1px #FFF solid; */
+    /* border-bottom: 1px #FFF solid; */
+    /* margin-top: 14px; */
+}
+
+.container-anime2{
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.animation {
+    width: 402px;
+    height: 300px;
+    /* border-right: #FFF solid 1px; */
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.text-main-anime {
+    width: 100%;
+    height: 50%;
+    color: #FFF;
+    font-size: 18px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    /* word-wrap: break-word;
+    overflow: auto; */
+}
+
+.big-border-center{
+    background-color: #FFF;
+    height: 850;
+    width: 1px  ;
+}
+
+.anime-border{
+    height: 1px;
+    width: 100%;
+    background-color: #FFF;
+}
+
+/* .white-line-anime{
+    height: 457px;
+    width: 1px;
+    background-color: #FFF;
+} */
+
+
+hr {
+    position: sticky;
+    top: 40px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.anime-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.api-anime1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    /* border-top: 1px white solid; */
+}
+
+.api-anime1-img {
+    
+    padding-top: 15px;
+    height: 400px;
+
+}
+
+
+
+
+
+
