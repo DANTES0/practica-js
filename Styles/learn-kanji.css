@@ -262,3 +262,20 @@ hr {
     font-weight: 700;
     opacity: 1;
  }
+
+
+ .kanji {
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px white solid;
+ }
+
+ .kanji-word{
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid white;
+ }
+
+ .kanji-ul {
+    margin: 0;
+ }
