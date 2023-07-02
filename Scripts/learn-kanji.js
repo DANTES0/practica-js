@@ -129,10 +129,23 @@ let store = {
             mp4: '',
             poster: ''
         }
-    }
+    },
+    kunyomi_ka_display: '',
+    onyomi_ja: ''
 };
 
 const fetchData = async () => {
+    let startValue = 0
+    let endValue = 10
+    while (startValue < endValue)
+    {
+        if (document.getElementById(`${startValue}`) != null){
+            document.getElementById(`${startValue}`).remove()
+        }
+        startValue++
+    }
+
+    startValue = 0
     const word = document.getElementById('search-bar-input')
     let i = 0;
     let arrKanji = [];
@@ -162,16 +175,143 @@ const fetchData = async () => {
                     mp4,
                     poster
                 }
-            }
+            },
+            kunyomi_ka_display,
+            onyomi_ja
         } = result
         console.log(character)
-        console.log(english)
+        console.log(english.split(', '))
+        let checkOnUndefined = english.split(', ')
+        if(checkOnUndefined[1] == undefined) {
+            checkOnUndefined[1] = ''
+        } else {
+            checkOnUndefined[1] = '→ ' + checkOnUndefined[1]
+        }
+        if(checkOnUndefined[2] == undefined) {
+            checkOnUndefined[2] = ''
+        }else {
+            checkOnUndefined[2] = '→ ' + checkOnUndefined[2]
+        }
+        console.log(checkOnUndefined[1])
         console.log(images)
         console.log(mp4)
         console.log(poster)
         console.log(examples)
-            i++;
-    }
+        console.log(examples[0].meaning.english)
+        console.log(examples[0].audio.mp3)
+        let createBlock = document.createElement('div')
+        createBlock.className = 'kanji'
+        createBlock.id = `${i}`
+        document.getElementById('kanji-wrapper').appendChild(createBlock);
+        createBlock.innerHTML = `<div class="kanji-word">
+        <div class="kanji-name">
+            <div class="kanji-name-kanji">
+                кандзи →
+            </div>
+            <div class="kanji-name-character">
+                ${character}
+            </div>
+        </div>
+        <div class="kanji-table-wrapper">
+            <div class="kanji-table">
+                <div class="kanji-table-name"> значения:
+                    <ul class="kanji-ul">
+                        <li class="kanji-list">→ ${checkOnUndefined[0]}</li>
+                        <li class="kanji-list">${checkOnUndefined[1]}</li>
+                        <li class="kanji-list">${checkOnUndefined[2]}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kanji-white-line"></div>
+    <div class="kanji-about">
+        <div class="kanji-about-wrapper">
+            <div class="kanji-about-grammar-wrapper">
+                <div class="kanji-about-grammar">
+                    Правописание
+                </div>
+                <div class="kanji-about-grammar-examples" id="kanji${i}">
+                </div>
+                <!-- <div class="kanji-about-grammar-arrow">→</div> -->
+            </div>
+
+            <div class="kanji-about-speaking">
+                <div class="kanji-about-speaking-onyomi-wrapper">
+                    <div class="kanji-about-speaking-onyomi-name">Onyomi</div>
+                    <div class="kanji-about-speaking-onyomi-character">${onyomi_ja}</div>
+                </div>
+                <div class="kanji-about-speaking-konyomi-wrapper">
+                    <div class="kanji-about-speaking-konyomi-name">Kunyomi</div>
+                    <div class="kanji-about-speaking-konyomi-character">${kunyomi_ka_display}</div>
+                </div>
+            </div>
+
+            <div class="kanji-about-audio">
+                <div class="kanji-about-audio-name-wrapper">
+                    <div class="kanji-about-audio-name">
+                        Примеры с звуковыми дрожками
+                    </div>
+                </div>
+                <div class="kanji-about-audio-examples-wrapper">
+                    <div class="kanji-about-audio-examples">
+                        <div class="kanji-about-audio-examples-text-column">
+                            <div class="kanji-about-audio-examples-text-column-examples">
+                                <button onclick="playMusic('${examples[0].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+                                <div data-title='${examples[0].meaning.english}' class="kanji-about-audio-examples-text">${examples[0].japanese}</div>
+                            </div>
+                            <div class="kanji-about-audio-examples-text-column-examples">
+                                <button onclick="playMusic('${examples[1].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+                                <div data-title='${examples[1].meaning.english}' class="kanji-about-audio-examples-text">${examples[1].japanese}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kanji-about-audio-examples">
+                        <div class="kanji-about-audio-examples-text-column examples">
+                            <div class="kanji-about-audio-examples-text-column-examples">
+                                <button onclick="playMusic('${examples[2].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+                                <div data-title='${examples[2].meaning.english}' class="kanji-about-audio-examples-text">${examples[2].japanese}</div>
+                            </div>
+                            <div class="kanji-about-audio-examples-text-column-examples">
+                                <button onclick="playMusic('${examples[3].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+                                <div data-title='${examples[3].meaning.english}' class="kanji-about-audio-examples-text">${examples[3].japanese}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kanji-about-audio-examples">
+                        <div class="kanji-about-audio-examples-text-column">
+                            <div class="kanji-about-audio-examples-text-column-examples">
+                                <button onclick="playMusic('${examples[4].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+                                <div data-title='${examples[4].meaning.english}' class="kanji-about-audio-examples-text">${examples[4].japanese}</div>
+                            </div>
+                            <div class="kanji-about-audio-examples-text-column-examples">
+                                <button onclick="playMusic('${examples[5].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+                                <div data-title='${examples[5].meaning.english}' class="kanji-about-audio-examples-text">${examples[5].japanese}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`
+        let countImages = 0
+        let ImagesBlocks = ''
+        while (countImages < images.length){
+            if (countImages != images.length - 1) {
+                ImagesBlocks = ImagesBlocks + 
+            `<img src="${images[countImages]}" alt="" class="kanji-about-grammar-steps">
+            <div class="kanji-about-grammar-arrow">→</div>`
+            } else {
+                ImagesBlocks = ImagesBlocks + 
+            `<img src="${images[countImages]}" alt="" class="kanji-about-grammar-steps">`
+            }
+            
+            countImages++
+            // console.log(ImagesBlocks)
+        }
+
+        console.log(ImagesBlocks)
+        document.getElementById(`kanji${i}`).innerHTML = ImagesBlocks
     // store = {
     //     ...store,
     //     character: data[0].kanji.character
@@ -198,6 +338,13 @@ const fetchData = async () => {
     // console.log(poster)
 
     // pump.innerHTML = `<img src ="${poster}"/>`
-
+    i++;
     word.value =""
-};
+}}
+
+
+
+function playMusic(url){
+    var music = new Audio(url);
+    music.play();
+}
