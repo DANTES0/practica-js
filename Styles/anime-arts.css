@@ -200,11 +200,12 @@ body {
 
 .big-border-center{
     background-color: #FFF;
-    height: 850;
+    height: 1073px;
     width: 1px  ;
 }
 
 .anime-border1{
+    
     height: 1px;
     width: 100%;
     background-color: #FFF;
@@ -236,7 +237,7 @@ hr {
 
 .api-anime1-img {
     margin-top: 50px;
-    height: 450px;
+    height: 500px;
     box-shadow: -15px 15px #F08E8E;
     margin-bottom: 50px;
 }
@@ -245,7 +246,7 @@ hr {
     display: flex;
     color: #FFF;
     text-align: right;
-    font-size: 30px;
+    font-size: 40px;
     font-family: Better VCR;
     background-color: transparent;
     outline: none;
@@ -254,6 +255,12 @@ hr {
     margin-left: 30px;
     text-shadow: #F08E8E -3px 2px;
 }
+
+ .forward-arrow1:hover {
+    color: #F08E8E;
+    text-shadow: -3px 2px #ffffff;
+  }
+  
 .text-main-anime-wrapper1{
     display: flex;
     align-items: center;
@@ -272,7 +279,7 @@ hr {
 
 .api-anime2-img {
     margin-top: 50px;
-    height: 450px;
+    height: 500px;
     box-shadow: 15px 15px #4273C1;
     margin-bottom: 50px;
 }
@@ -281,7 +288,7 @@ hr {
     display: flex;
     color: #FFF;
     text-align: left;
-    font-size: 30px;
+    font-size: 40px;
     font-family: Better VCR;
     background-color: transparent;
     outline: none;
@@ -290,6 +297,12 @@ hr {
     margin-right: 50px;
     text-shadow: #4273C1 3px 2px;
 }
+.forward-arrow2:hover {
+  color: #4273C1;
+  text-shadow: 3px 2px #ffffff;
+}
+
+  
 
 .anime-border2{
     height: 1px;
