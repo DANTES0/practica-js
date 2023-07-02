@@ -26,7 +26,7 @@ body {
     line-height: normal;
     margin: 0 17px 0 auto;
     cursor: pointer;
-    z-index: 2;
+    z-index: 4;
 }
 
 .menu-burger {
@@ -87,6 +87,7 @@ body {
     max-height: 0;
     font-size: 0;
     overflow: hidden;
+    z-index: 4;
     /* overflow-x: auto; */
     /* overflow-y: auto; */
     transition: .5s all;
@@ -107,6 +108,7 @@ body {
     font-weight: 400;
     line-height: normal;
     /* margin-left: 50px;  */
+    z-index: 3;
     text-align: left;
     padding-left: 90px;
     /* padding-bottom: 40px; */
@@ -382,6 +384,7 @@ hr {
     /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
     /* filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(359deg) brightness(106%) contrast(103%); */
     filter: invert(100%) sepia(0%) saturate(7460%) hue-rotate(131deg) brightness(111%) contrast(95%);
+    z-index: -999;
  }
 
  .kanji-about-grammar-arrow {
@@ -475,6 +478,10 @@ hr {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.kanji-about-audio-examples-text{
+    z-index: -999;
 }
 
 .kanji-about-audio-examples-play{
