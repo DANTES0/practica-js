@@ -26,7 +26,7 @@ body {
     line-height: normal;
     margin: 0 17px 0 auto;
     cursor: pointer;
-    z-index: 4;
+    /* z-index: 4; */
 }
 
 .menu-burger {
@@ -87,13 +87,14 @@ body {
     max-height: 0;
     font-size: 0;
     overflow: hidden;
-    z-index: 4;
+    z-index: 999;
     /* overflow-x: auto; */
     /* overflow-y: auto; */
     transition: .5s all;
 }
 
 .burger-menu-nav{
+    /* position: absolute; */
     display: block;
     width: 100%;
     padding: 10px;
@@ -108,7 +109,7 @@ body {
     font-weight: 400;
     line-height: normal;
     /* margin-left: 50px;  */
-    z-index: 3;
+    z-index: 999;
     text-align: left;
     padding-left: 90px;
     /* padding-bottom: 40px; */
@@ -158,6 +159,7 @@ body {
     height: 64px;
     border-bottom: 1px white solid;
     background-color: black;
+    z-index: 999;
 }
 .text-container {
     display: flex;
@@ -384,7 +386,7 @@ hr {
     /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
     /* filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(359deg) brightness(106%) contrast(103%); */
     filter: invert(100%) sepia(0%) saturate(7460%) hue-rotate(131deg) brightness(111%) contrast(95%);
-    z-index: -999;
+    /* z-index: -999; */
  }
 
  .kanji-about-grammar-arrow {
@@ -461,27 +463,32 @@ hr {
     font-weight: 400;
     line-height: normal; 
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: left; */
 }
-
+.kanji-about-audio-examples{
+    margin-top: 5px;
+}
 .kanji-about-audio-examples-text-column{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    /* z-index: 0; */
 }
 
 .kanji-about-audio-examples-text-column-examples{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: space-around; */
     align-items: center;
+    /* margin-top: 3px; */
 }
 
 .kanji-about-audio-examples-text{
-    z-index: -999;
+    position: relative;
+    /* z-index: 0; */
 }
 
 .kanji-about-audio-examples-play{
@@ -491,10 +498,12 @@ hr {
     border: none;
     outline: none;
     cursor: pointer;
+    /* z-index: 0; */
 }
 
 [data-title]{
     position:relative;
+    /* z-index: -1; */
 }
 [data-title]:after{
     content:attr(data-title);
@@ -508,6 +517,7 @@ hr {
     white-space:nowrap;
     -webkit-transition:0.25s linear opacity;
     transition:0.25s linear opacity;
+    /* z-index: 999; */
 }
 [data-title]:hover:after{
     left:-150px;

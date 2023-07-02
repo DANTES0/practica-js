@@ -65,7 +65,6 @@ function revealText(text, selector, n_changes, duration_milliseconds, charset) {
       span.style.opacity = '0.0'
       element.appendChild(span)
       span.style.transition = `all ${duration_milliseconds}ms ease-in`
-      
       setTimeout(function() {
         span.style.opacity = '1.0'
         if (text[i] == '\n' || text[i] == ' ') return
@@ -79,6 +78,7 @@ function revealText(text, selector, n_changes, duration_milliseconds, charset) {
             clearInterval(interval)
           } else {
             span.innerText = charset[Math.floor(Math.random()*charset.length)]
+            
           }
   
         }, duration_milliseconds/n_changes)
@@ -148,7 +148,6 @@ const fetchData = async () => {
     startValue = 0
     const word = document.getElementById('search-bar-input')
     let i = 0;
-    let arrKanji = [];
 
     const response = await fetch(url+word.value, options);
     const data = await response.json();
@@ -198,7 +197,7 @@ const fetchData = async () => {
         console.log(poster)
         console.log(examples)
         console.log(examples[0].meaning.english)
-        console.log(examples[0].audio.mp3)
+        // console.log(examples[3].audio.mp3)
         let createBlock = document.createElement('div')
         createBlock.className = 'kanji'
         createBlock.id = `${i}`
@@ -254,41 +253,8 @@ const fetchData = async () => {
                     </div>
                 </div>
                 <div class="kanji-about-audio-examples-wrapper">
-                    <div class="kanji-about-audio-examples">
-                        <div class="kanji-about-audio-examples-text-column">
-                            <div class="kanji-about-audio-examples-text-column-examples">
-                                <button onclick="playMusic('${examples[0].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
-                                <div data-title='${examples[0].meaning.english}' class="kanji-about-audio-examples-text">${examples[0].japanese}</div>
-                            </div>
-                            <div class="kanji-about-audio-examples-text-column-examples">
-                                <button onclick="playMusic('${examples[1].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
-                                <div data-title='${examples[1].meaning.english}' class="kanji-about-audio-examples-text">${examples[1].japanese}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kanji-about-audio-examples">
-                        <div class="kanji-about-audio-examples-text-column examples">
-                            <div class="kanji-about-audio-examples-text-column-examples">
-                                <button onclick="playMusic('${examples[2].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
-                                <div data-title='${examples[2].meaning.english}' class="kanji-about-audio-examples-text">${examples[2].japanese}</div>
-                            </div>
-                            <div class="kanji-about-audio-examples-text-column-examples">
-                                <button onclick="playMusic('${examples[3].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
-                                <div data-title='${examples[3].meaning.english}' class="kanji-about-audio-examples-text">${examples[3].japanese}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kanji-about-audio-examples">
-                        <div class="kanji-about-audio-examples-text-column">
-                            <div class="kanji-about-audio-examples-text-column-examples">
-                                <button onclick="playMusic('${examples[4].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
-                                <div data-title='${examples[4].meaning.english}' class="kanji-about-audio-examples-text">${examples[4].japanese}</div>
-                            </div>
-                            <div class="kanji-about-audio-examples-text-column-examples">
-                                <button onclick="playMusic('${examples[5].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
-                                <div data-title='${examples[5].meaning.english}' class="kanji-about-audio-examples-text">${examples[5].japanese}</div>
-                            </div>
-                        </div>
+                    <div class="kanji-about-audio-examples" id='audioKanji${i}'>
+
                     </div>
                 </div>
             </div>
@@ -309,9 +275,43 @@ const fetchData = async () => {
             countImages++
             // console.log(ImagesBlocks)
         }
-
         console.log(ImagesBlocks)
         document.getElementById(`kanji${i}`).innerHTML = ImagesBlocks
+        let kanjiAudio = ''
+        if (examples.length >= 3) {
+            kanjiAudio = kanjiAudio + `<div class="kanji-about-audio-examples-text-column">
+            <div data-title='${examples[0].meaning.english}' class="kanji-about-audio-examples-text-column-examples">
+            <button onclick="playMusic('${examples[0].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+            <div class="kanji-about-audio-examples-text">${examples[0].japanese}</div>
+        </div>
+        <div data-title='${examples[1].meaning.english}' class="kanji-about-audio-examples-text-column-examples">
+            <button onclick="playMusic('${examples[1].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+            <div class="kanji-about-audio-examples-text">${examples[1].japanese}</div>
+        </div>
+        <div data-title='${examples[2].meaning.english}' class="kanji-about-audio-examples-text-column-examples">
+            <button onclick="playMusic('${examples[2].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+            <div class="kanji-about-audio-examples-text">${examples[2].japanese}</div>
+        </div>
+            </div>`
+            let count = 3
+            kanjiAudio = kanjiAudio + `<div class="kanji-about-audio-examples">
+            <div class="kanji-about-audio-examples-text-column">
+                `
+            while (examples[count] != undefined && count!= 6) {
+                kanjiAudio = kanjiAudio +
+                 `<div data-title='${examples[count].meaning.english}' class="kanji-about-audio-examples-text-column-examples">
+                <button onclick="playMusic('${examples[count].audio.mp3}')" class="kanji-about-audio-examples-play"></button>
+                <div class="kanji-about-audio-examples-text">${examples[count].japanese}</div>
+            </div>`
+                count++
+            }
+        }
+        kanjiAudio = kanjiAudio + `</div>
+        </div>`
+        count = 0
+        document.getElementById(`audioKanji${i}`).innerHTML = kanjiAudio
+        
+
     // store = {
     //     ...store,
     //     character: data[0].kanji.character
