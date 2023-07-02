@@ -25,7 +25,7 @@ body {
     font-weight: 400;
     line-height: normal;
     margin: 0 17px 0 auto;
-    cursor: pointer;
+    /* cursor: pointer; */
     z-index: 2;
 }
 
@@ -157,6 +157,7 @@ body {
     height: 64px;
     border-bottom: 1px white solid;
     background-color: black;
+    z-index: 999;
 }
 
 .container-anime1 {
@@ -238,8 +239,11 @@ hr {
 .api-anime1-img {
     margin-top: 50px;
     height: 500px;
+    width: 550px;
     box-shadow: -15px 15px #F08E8E;
     margin-bottom: 50px;
+    object-fit: fill;
+    animation: fromOpacity 4s;
 }
 
 .forward-arrow1{
@@ -254,11 +258,13 @@ hr {
     cursor: pointer;
     margin-left: 30px;
     text-shadow: #F08E8E -3px 2px;
+    transition: 0.5s all;
 }
 
  .forward-arrow1:hover {
     color: #F08E8E;
     text-shadow: -3px 2px #ffffff;
+    transform: scale(1.2);
   }
   
 .text-main-anime-wrapper1{
@@ -274,14 +280,26 @@ hr {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+    width: 50%;
 }
+
 
 .api-anime2-img {
     margin-top: 50px;
     height: 500px;
+    width: 550px;
     box-shadow: 15px 15px #4273C1;
     margin-bottom: 50px;
+    object-fit: fill;
+    animation: fromOpacity 4s;
+}
+
+@keyframes fromOpacity {
+    from {
+        opacity: 0;
+    }
+    50% { opacity: 0;}
+    to{ opacity: 1;}
 }
 
 .forward-arrow2{
@@ -296,10 +314,12 @@ hr {
     cursor: pointer;
     margin-right: 50px;
     text-shadow: #4273C1 3px 2px;
+    transition: 0.5s all;
 }
 .forward-arrow2:hover {
   color: #4273C1;
   text-shadow: 3px 2px #ffffff;
+  transform: scale(1.2);
 }
 
   
@@ -308,6 +328,7 @@ hr {
     height: 1px;
     width: 100%;
     background-color: #FFF;
+    transform: rotate(0.5turn);
 }
 
 .text-main-anime2 {
@@ -337,4 +358,8 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: linear-gradient(180deg, #4273C1, #F08E8E);
+}
+
+.last-nav {
+    border-bottom: 1px solid white;
 }

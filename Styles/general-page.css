@@ -108,6 +108,8 @@ body{
 	width: 100%;
 }
 pre {
+    /* position: sticky; */
+    /* bottom: 0; */
 	font-weight: bold;
     color: #4273C1;
 }

@@ -52,4 +52,80 @@ function revealText(text, selector, n_changes, duration_milliseconds, charset) {
   setTimeout(()=> revealText(text2, '.text-main-anime2', 5, 500, alphabet), 7000)
 
 //   revealText(text2, '.text-main-anime2', 5, 500, alphabet)
-  
+const imgWaifu = document.getElementById(`waifu`)
+const imgCatBoy = document.getElementById(`catBoy`)
+
+const imageWaifu = async() => {
+  const response = await fetch(`https://api.waifu.pics/sfw/waifu`)
+  const result = await response.json()
+  imgWaifu.setAttribute('src', result.url)
+
+  // pump.innerHTML = `<img src ="${result.results[0].source_url}"/>`
+};
+
+const imageCatBoy = async() => {
+  const response = await fetch(`https://api.catboys.com/img`)
+  const result = await response.json()
+  imgCatBoy.setAttribute('src', result.url)
+  console.log(result.url)
+
+}
+imageCatBoy()
+let store = {
+  urlWaifu: '',
+  urlCatBoy: '' 
+}
+
+const imageResponse = async() => {
+  const responseWaifu = await fetch(`https://api.waifu.pics/sfw/waifu`)
+  const resultWaifu = await responseWaifu.json()
+  imgWaifu.setAttribute('src', resultWaifu.url)
+
+  const responseCatBoy = await fetch(`https://api.catboys.com/img`)
+  const resultCatBoy = await responseCatBoy.json()
+  imgCatBoy.setAttribute('src', resultCatBoy.url)
+}
+imageResponse()
+
+document.getElementById('waifuBtn').addEventListener('click', imageWaifu)
+document.getElementById('catBoyBtn').addEventListener('click', imageCatBoy)
+
+document.getElementById('catBoyBtn').addEventListener('click', function() {
+  imgCatBoy.style.transition = '0.3s all'
+  imgCatBoy.style.opacity = '0'
+  setTimeout(changeOpacityCat, 1200)
+})
+
+function changeOpacityCat() {
+  imgCatBoy.style.opacity = '1'
+}
+function changeOpacityWaifu() {
+  imgWaifu.style.opacity = '1'
+}
+
+document.getElementById('waifuBtn').addEventListener('click', function() {
+  imgWaifu.style.transition = '0.3s all'
+  imgWaifu.style.opacity = '0'
+  setTimeout(changeOpacityWaifu, 1200)
+})
+
+document.getElementById('burger-line-wrapper').addEventListener('click', function() {
+  const checker = document.getElementById('check-menu')
+  const burgerMenu = document.getElementById('burger-menu')
+  const name = document.getElementById('page-name')
+  const japanFlag = document.getElementById('japan-flag')
+  if (!checker.checked) {
+    name.textContent = 'Японская атмосфера';
+    japanFlag.style.display = 'block'  
+    name.style.textShadow ='-3px 3px #558ABB'  
+    checker.checked = true
+    burgerMenu.style.maxHeight = '100vh'
+  } else {
+    checker.checked = false
+    burgerMenu.style.maxHeight = '0'
+    name.textContent = 'Изучение японских иероглифов';
+    name.style.textShadow = 'none'
+    japanFlag.style.display = 'none'
+    }
+
+})

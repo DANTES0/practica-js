@@ -123,7 +123,6 @@ const image = async() => {
     const result = await response.json()
     console.log(result)
 
-    // pump.innerHTML = `<img src ="${result.results[0].source_url}"/>`
 }
 
 
