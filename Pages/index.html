@@ -1,32 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <title>aaaaa</title>
+<title>Page Title</title>
+  <!-- <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"> 
+  <!-- <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> -->
+  <link href="../Styles/style.css" rel="stylesheet">
+
+  <div class="nav-bar">
+    <img src="../img/japan-flag.svg" id="japan-flag">
+    <input type="checkbox" id="check-menu">
+    <div class="page-name" id="page-name">Изучение японских иероглифов</div>
+    
+    <label class="menu">Меню</label>
+    
+    <!-- <a href="general-page.html" class="menu-burger"><img src="./img/burger.svg"></a> -->
+    <div for="check-menu" class="burger-line-wrapper" id='burger-line-wrapper'>
+        <div class="burger-line first" id="first"></div>   
+        <div class="burger-line second"></div>  
+        <div class="burger-line third"></div>   
+        <div class="burger-line fourth"></div>   
+    </div>
+    <nav class="burger-menu" id="burger-menu">
+        <a href="../Pages/general-page.html" class="burger-menu-nav first-nav">Главная страница</a>
+        <a href="#" class="burger-menu-nav">Факты о Японии</a>
+        <a href="#" class="burger-menu-nav">Игра тайко (太鼓)</a>
+        <a href="../Pages/anime-arts.html" class="burger-menu-nav">Аниме арты</a>
+        <a href="#" class="burger-menu-nav">Изучение японских иероглифов</a>
+        <a href="#" class="burger-menu-nav last-nav">Клинок, рассекающий демонов</a>
+    </nav>
+</div>
 </head>
 <body>
-    <div id="root">
-        <div id = "pump">Этот блок служит проверкой</div>
-        <input value="" id = "input-word"/>
-        <button class="input" id = "input"></button> 
+
+  <section>
+    <div class="container">
+      <div class="accordion">
+        <div class="accordion-item" id="question1">
+          <a class="accordion-link" href="#question1">
+            <div class="flex">
+              <h3>BRANDING</h3>
+              <h3>тут стрелка</h3>
+            </div>
+          </a>
+          <div class="answer">
+            <p> We believe in the greater good, we strive to do something for people, we aim to make their lives easier and more enjoyable, we love businesses that keep this</p>
+          </div>
+          <hr>
+      </div>
+        <div class="accordion-item" id="question2">
+          <a class="accordion-link" href="#question2">
+            <div class="flex">
+              <h3>UX/UI DESIGN</h3>
+              <ul>
+                <li>#Figma</li>
+                <li>#Sketch</li>
+                <li>#Adobe</li>
+                <li>#Invision</li>
+                <li>#Protopie</li>
+              </ul>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+            <i class="icon ion-md-arrow-down"></i>
+          </a>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+          </div>
+          <hr>
+      </div>
+        <div class="accordion-item" id="question3">
+          <a class="accordion-link" href="#question3">
+            <div class="flex">
+              <h3>FRONTEND DEVELOPMENT</h3>
+              <ul>
+                <li>#Figma</li>
+                <li>#Sketch</li>
+                <li>#Adobe</li>
+                <li>#Invision</li>
+                <li>#Protopie</li>
+              </ul>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+            <i class="icon ion-md-arrow-down"></i>
+          </a>
+          <div class="answer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+          </div>
+          <hr>
+      </div>
+        <div class="accordion-item" id="question4">
+          <a class="accordion-link" href="#question4">
+            <div>
+              <h3>BACKEND DEVELOPMENT</h3>
+              <ul>
+                <li>#Figma</li>
+                <li>#Sketch</li>
+                <li>#Adobe</li>
+                <li>#Invision</li>
+                <li>#Protopie</li>
+              </ul>
+            </div>
+            <i class="icon ion-md-arrow-forward"></i>
+            <i class="icon ion-md-arrow-down"></i>
+          </a>
+          <div class="answer">
+            <img src="../img/watermark.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+          </div>
+          <hr>
+      </div>
+      <div class="accordion-item" id="question5">
+        <a class="accordion-link" href="#question5">
+          <div>
+            <h3>BACKEND DEVELOPMENT</h3>
+            <ul>
+              <li>#Figma</li>
+              <li>#Sketch</li>
+              <li>#Adobe</li>
+              <li>#Invision</li>
+              <li>#Protopie</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="answer">
+          <img src="../img/watermark.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        </div>
+        <hr>
     </div>
-
-    <!-- <pre id="fire"></pre> -->
-    <!-- <pre id="fire"></pre> -->
-    <!-- <center style="height: 100%;">
-        <table height="100%">
-            <tbody>
-                <tr>
-                    <td>
-                        <pre>This animated fire in plain ASCII art needs JavaScript to run in your web browser.</pre>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </center> -->
-
-    <script src="./ApiScript.js"></script>
+    <div class="accordion-item" id="question6">
+        <a class="accordion-link" href="#question6">
+          <div>
+            <h3>BACKEND DEVELOPMENT</h3>
+            <ul>
+              <li>#Figma</li>
+              <li>#Sketch</li>
+              <li>#Adobe</li>
+              <li>#Invision</li>
+              <li>#Protopie</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="answer">
+          <img src="../img/watermark.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        </div>
+        <hr>
+    </div>
+    <div class="accordion-item" id="question7">
+        <a class="accordion-link" href="#question7">
+          <div>
+            <h3>BACKEND DEVELOPMENT</h3>
+            <ul>
+              <li>#Figma</li>
+              <li>#Sketch</li>
+              <li>#Adobe</li>
+              <li>#Invision</li>
+              <li>#Protopie</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="answer">
+          <img src="../img/watermark.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        </div>
+        <hr>
+    </div>
+    <div class="accordion-item" id="question8">
+        <a class="accordion-link" href="#question8">
+          <div>
+            <h3>BACKEND DEVELOPMENT</h3>
+            <ul>
+              <li>#Figma</li>
+              <li>#Sketch</li>
+              <li>#Adobe</li>
+              <li>#Invision</li>
+              <li>#Protopie</li>
+            </ul>
+          </div>
+          <i class="icon ion-md-arrow-forward"></i>
+          <i class="icon ion-md-arrow-down"></i>
+        </a>
+        <div class="answer">
+          <img src="../img/watermark.jpg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        </div>
+        <hr>
+    </div>
+     </div>
+    </div>
+  </section>
+<!-- <script src="../Scripts/ApiScript.js"></script> -->
 </body>
-</html>
+</html> 
