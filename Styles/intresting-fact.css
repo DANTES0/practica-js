@@ -212,6 +212,7 @@ section {
 
 .accordion-item {
     background-color: #000000;
+    cursor: pointer;
 
 }
 .accordion-item hr {
@@ -259,6 +260,9 @@ section {
     justify-content: space-between;
     padding-left: 20px;
 }
+.flex-text {
+    cursor: pointer;
+}
 .arrow {
     padding-right: 20px;
 }
@@ -274,6 +278,7 @@ section {
     margin-bottom: 40px;
 }
 
+
 .answer {
     color: #FFF;
     font-size: 30px;
@@ -287,6 +292,52 @@ section {
     background-color: #000;
     transition: max-height 650ms;
     /* margin-bottom: 50px; */
+}
+
+#check-menu1 {
+    display: none;
+}
+#check-menu2 {
+    display: none;
+}
+#check-menu3 {
+    display: none;
+}
+#check-menu4 {
+    display: none;
+}
+#check-menu5 {
+    display: none;
+}
+#check-menu6 {
+    display: none;
+}
+#check-menu7 {
+    display: none;
+}
+#check-menu8 {
+    display: none;
+}
+#check-menu9 {
+    display: none;
+}
+#check-menu10 {
+    display: none;
+}
+#check-menu11 {
+    display: none;
+}
+#check-menu12 {
+    display: none;
+}
+#check-menu13 {
+    display: none;
+}
+#check-menu14 {
+    display: none;
+}
+#check-menu15 {
+    display: none;
 }
 
 img {
@@ -305,9 +356,9 @@ img {
 
 }
 
-.accordion-item:target .answer {
+/* .accordion-item:target .answer {
     max-height: 400px;
-}
+} */
 
 /* .accordion-item:target .accordion-link .ion-md-arrow-forward {
     display: none
