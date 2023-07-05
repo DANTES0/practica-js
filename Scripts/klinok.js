@@ -20,6 +20,58 @@ document.getElementById('burger-line-wrapper').addEventListener('click', functio
   
   })
 
+const imageMainCharacters = ['../img/tangiro.png','../img/nezuko.png', '../img/inoske.png', '../img/zenitsu.png', '../img/mudzan.png']
+const textMainCharacters = ['Танджиро по своей природе очень добр. «Человек с добрыми глазами» - так его описывают. Очень решительный и целеустремлённый. Хотя Танджиро и сам относительно силён, он не боится просить других о помощи, когда в этом есть необходимость. Он всегда готов встать на защиту окружающих, но защита сестры для него является высшим приоритетом.Важной чертой характера Танджиро является его сострадательность, нередко проявляющаяся даже по отношению к демонам. Однако за время службы в рядах истребителей Танджиро набирается опыта, становится более расчётливым и решительным. Благодаря храбрости и желанию защитить слабых он встречает соперников с уважением и достоинством, будь то люди или демоны.','Младшая сестра Танджиро. Она была превращена в демона Мудзаном Кибуцуджи. Будучи еще человеком Незуко была очень доброй, заботливой старшей сестрой, которая прежде всего думала о других.Однако, как Демон, Незуко, похоже, забыла значительную часть своих воспоминаний о человеке, помимо тех, что связаны с её семьёй. Она по-прежнему очень заботится и защищает людей, которых считает членами своей семьи.Незуко также сохраняет некоторые из своих человеческих эмоций, поскольку она плачет, когда грустит, и улыбается, когда счастлива, но в целом она выглядит лишенной эмоции по сравнению с человеком. Она всё ещё гораздо спокойнее и менее зла, чем большинство демонов.', 'Охотник на демонов, путешествующий в компании Танджиро. Иноске невероятно вспыльчивый и опрометчивый, поэтому он часто влезает в драку с более сильным противником, не задумываясь о последствиях. Он любит соревноваться и часто пытается спровоцировать своих товарищей — Танджиро и Зеницу — на поединок. Иноске вырос в горах один, и из-за этого ему сложно общаться с людьми, он не умеет читать и писать. Благодаря тому, что он стал охотником на демонов и обрёл друзей, Иноске научился уделять больше времени обдумыванию стратегий, анализу противника и оценке рисков. Иноске довольно мстителен, особенно когда страдают люди, о благосостоянии которых он заботится.', 'Истребитель демонов и один из главных героев, путешествующих с Танджиро Камадо. Зеницу труслив. Он считает, что, ввиду опасности работы охотника на демонов, жить ему осталось недолго, из-за чего он часто пристает ко встречным девушкам, упрашивая их выйти за него замуж. У Зеницу низкая самооценка, мешающая ему оправдать ожидания других людей и свои собственные. Это часто заставляет его потерять веру в свои способности и, даже когда это очевидно, Зеницу отрицает, что он одержал победу своими силами. Он думает, что его призвание — жить скромной жизнью, а не убивать демонов. Но, даже будучи мягкотелым, чувство долга перед помогает Зеницу забыть о страхе и сосредоточиться в нужный момент.', 'Первый в своем роде демон, прародитель остальных демонов. Антагонист аниме и манги "Клинок, рассекающий демонов". Лунам он не прощает некомпетентность и провалы, но может похвалить за успешное завершение миссии. Кибуцуджи не воспринимает своих врагов всерьез. Мудзану также не нравится, когда ему задают вопросы или приказывают. Он склонен к нарциссизму. Его раздутое самолюбие и бредовое чувство собственного достоинства настолько велико, что он не может выдержать, когда над ним насмехаются или корректируют его, полагая, что другие существуют только для того, чтобы служить ему. Это также означает, что он редко воспринимает какого-либо противника или угрозу всерьёз. ']
+const nameMainCharacters = ['Танджиро Камадо', 'Незуко Камадо', 'Иноске Хашибира', 'Зеницу Агацума', 'Мудзан Кибуцуджи']
+const firstText = document.getElementById('first-text')
+const firstImg = document.getElementById('first-img')
+const firstName = document.getElementById('first-name')
+let countMainClick = 0
+document.getElementById('first-btn').addEventListener('click', function() {
+  console.log('сработало нажатие')
+  countMainClick++
+  if (countMainClick != 5){
+    firstImg.style.backgroundImage = `url(${imageMainCharacters[countMainClick]})`
+    firstText.innerHTML = textMainCharacters[countMainClick]
+    firstName.innerHTML = nameMainCharacters[countMainClick]
+  } else {
+    countMainClick = -1
+  }
+  
+
+})
+
+const hashiroName = ['Гёмей Химеджима', 'Кёджуро Ренгоку', 'Тенген Узуй', 'Гию Томиока', 'Мицури Канроджи', 'Обанай Игуро', 'Санеми Шинадзугава', 'Муичиро Токито', 'Шинобу Кочо']
+const hashiroImage = ['../img/stolp.png', '../img/rengoku.png', '../img/tengen.png','../img/tomioko.png', '../img/kanrodji.png', '../img/iguro.png', '../img/sanemi.png', '../img/muichiro.png', '../img/kocho.png']
+const secondImg = document.getElementById('second-img')
+const secondName = document.getElementById('second-name')
+let countHashiroClick = 0
+document.getElementById('second-btn').addEventListener('click', function() {
+  countHashiroClick++
+  if (countHashiroClick != 9) {
+    secondImg.style.backgroundImage = `url(${hashiroImage[countHashiroClick]})`
+    secondName.innerHTML = hashiroName[countHashiroClick]
+  } else {
+    countHashiroClick = -1
+  }
+})
+
+const demonName =['Аказа', 'Гютаро', 'Энму', 'Руи']
+const demonImage = ['../img/akaza.png', '../img/gitaro.png', '../img/enmu.png', '../img/rui.png']
+const thirdImg = document.getElementById('third-img')
+const thirdName = document.getElementById('third-name')
+let countDemonClick = 0 
+
+document.getElementById('third-btn').addEventListener('click', function() {
+  countDemonClick++
+  if (countDemonClick != 4) {
+    thirdImg.style.backgroundImage = `url(${demonImage[countDemonClick]})`
+    thirdName.innerHTML = demonName[countDemonClick]
+  } else {
+    countDemonClick = -1
+  }
+})
+
 
   function revealText(text, selector, n_changes, duration_milliseconds, charset) {
     let element = document.querySelector(selector)

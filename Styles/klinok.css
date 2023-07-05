@@ -366,7 +366,8 @@ hr{
     margin-bottom: 160px;
     margin-right: 20px;
     width: 5%;
-    margin-top: auto
+    margin-top: auto;
+    z-index: 5;
     
 }
 
@@ -525,6 +526,7 @@ hr{
     margin-top: auto;
     transform: scale(-1, 1);
     margin-left: 140px;
+    z-index: 4;
 
 }
 
@@ -585,4 +587,8 @@ hr{
     justify-content: center;
     /* border: 1px white solid; */
     margin-bottom: 30px;
+}
+
+#third-img {
+    background-image: url('../img/akaza.png');
 }
