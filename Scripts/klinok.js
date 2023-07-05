@@ -71,3 +71,13 @@ document.getElementById('burger-line-wrapper').addEventListener('click', functio
   Тот пропал при странных обстоятельствах, а юноша взвалил на себя ответственность за семью. Когда Танджиро отправился продавать уголь, он не думал, что при возвращении домой застанет кровавую картину. Его родственники были убиты. Семья растерзана, и везде по дому виднеются следы крови. Единственный человек оставшийся в живых – сестренка главного героя. Она рассказала о демонах пришедших из леса в их дом. Оказалось, что девушка была ими обращена и скоро может стать убийцей. Герою истории нужно следить за поведением сестры и мстить за смерть матери и младшего братика.`
   
   revealText(text, '.text-about', 5, 500, alphabet)
+
+//   const quotesName = document.getElementById("name-quotes")
+
+//   const quotes = async() => {
+//     const response = await fetch("https://animechan.xyz/api/random/anime?title=Demon Slayer")
+//     const result = await response.json()
+//     console.log(result)
+//   }
+
+// quotes()
