@@ -527,3 +527,55 @@ hr{
     margin-left: 140px;
 
 }
+
+/* .trailer-info{
+
+} */
+
+
+.trailer-info {
+    box-shadow: inset 0 0 0 4px white;
+    position: relative;
+    color: #FFF;
+    font-size: 25px;
+    font-family: Better VCR;
+    padding: 2em;
+    display: flex;
+    width: 50%;
+    margin-top: 30px;
+    height: 130px;
+
+  }
+  
+  .trailer-info:before,
+  .trailer-info:after {
+    content: '';
+    position: absolute;
+  }
+  
+  .trailer-info:before {  
+    top: 0;
+    right: 2em;
+    bottom: 0;
+    left: 2em;
+    
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+  }
+  
+  
+  .trailer-info:after {  
+    top: 2em;
+    right: 0;
+    bottom: 2em;
+    left: 0;
+    
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+  }
+  .trailer-info-container{
+    width: 100%;
+    height: 525px;
+    display: flex;
+    justify-content: center;
+}
