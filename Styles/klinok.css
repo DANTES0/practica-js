@@ -243,6 +243,7 @@ hr{
     height: 990px;
     background-size: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .img-wrapper{
