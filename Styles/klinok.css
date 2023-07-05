@@ -167,7 +167,7 @@ html::-webkit-scrollbar-track {
   
 html::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: linear-gradient(180deg, #4273C1, #F08E8E);
+    background: linear-gradient(180deg, black, #4c4c4c);
 }
 
 .last-nav {
@@ -424,7 +424,8 @@ hr{
     font-family: Better VCR;
     margin: 40px;
     text-indent: 20px;
-    width:50%;
+    width: 50%;
+    /* height: auto; */
     /* margin-left: 120px; */
 
 }
