@@ -1,32 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <title>aaaaa</title>
+  <title>Taiko Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="root">
-        <div id = "pump">Этот блок служит проверкой</div>
-        <input value="" id = "input-word"/>
-        <button class="input" id = "input"></button> 
-    </div>
+  <div id="game-container">
+    <div id="drum"></div>
+    <div id="hit-zone"></div>
+    <!-- <div class="ball" id="ball1"></div>
+    <div class="ball" id="ball2"></div> -->
+  </div>
+  <div id="score-display"></div>
+  <button id="start-button">Start Game</button>
 
-    <!-- <pre id="fire"></pre> -->
-    <!-- <pre id="fire"></pre> -->
-    <!-- <center style="height: 100%;">
-        <table height="100%">
-            <tbody>
-                <tr>
-                    <td>
-                        <pre>This animated fire in plain ASCII art needs JavaScript to run in your web browser.</pre>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </center> -->
-
-    <script src="./ApiScript.js"></script>
+  
+  <script src="ApiScript.js"></script>
 </body>
 </html>

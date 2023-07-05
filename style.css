@@ -1,77 +1,47 @@
-.input {
-    width: 50px;
-    height: 20px;;
-}
-#root {
-    /* height: 320px; */
+#game-container {
+  width: 800px;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-#fire {
-    font-size: 2em;
-    line-height: 1em;
-  }
-  
-  .fire-char {
-    display: inline-block;
-    animation: flicker 0.1s infinite alternate;
-    /* transform: scaleX(-1); */
-    /* transform: scaleY(-1); */
-  }
-  
-  /* @keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-    80% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  .fire-char-intensity-1 {
-    color: black;
-  }
-  
-  .fire-char-intensity-2 {
-    color: black;
-  }
-  
-  .fire-char-intensity-3 {
-    color: black;
-  } */
+#drum {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  transform: translateX(-50%);
+  transition: left 0.2s;
+  cursor: pointer;
+  z-index: 2;
+}
 
-  /* body,
-table,
-td,
-pre {
-	border-spacing: 0;
-	margin: 0;
-	padding: 0;
+#drum:hover {
+  background-color: darkred;
 }
-body{
-	background: #000;
-	color: #232323;
-	height: 100%;
-	width: 100%;
+
+#hit-zone {
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  left: 130px; /* Измененное значение */
+  top: 0;
+  cursor: pointer;
+  opacity: 0.3;
+  background-color: blue;
 }
-pre {
-	font-weight: bold;
+
+.ball {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left 3s;
 }
-a {
-	color: #232323;
-}
-a:hover {
-	color: #232323;
-}
-address {
-	background: #000;
-	bottom: 10px;
-	font-family: Georgia, serif;
-	font-style: normal;
-	position: absolute;
-	right: 10px;
-	text-align: right;
-} */
-  
