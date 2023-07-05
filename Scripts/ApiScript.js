@@ -1,88 +1,88 @@
 // let EnglishWord = 'read'
 
 
-const root = document.getElementById('root')
-const pump = document.getElementById('pump')
+// const root = document.getElementById('root')
+// const pump = document.getElementById('pump')
 
-const url = `https://kanjialive-api.p.rapidapi.com/api/public/search/advanced/?kem=`;
-// const url = `https://kanjialive-api.p.rapidapi.com/api/public/search/advanced/?kem=английское слово`;
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'f6ecb975d7msh2261e06589e3676p19964fjsndd30636c56c4',
-            'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
-        }
-    };
+// const url = `https://kanjialive-api.p.rapidapi.com/api/public/search/advanced/?kem=`;
+// // const url = `https://kanjialive-api.p.rapidapi.com/api/public/search/advanced/?kem=английское слово`;
+//     const options = {
+//         method: 'GET',
+//         headers: {
+//             'X-RapidAPI-Key': 'f6ecb975d7msh2261e06589e3676p19964fjsndd30636c56c4',
+//             'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
+//         }
+//     };
 
-const urlE = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/`;
-// const urlE = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/символ кандзи`;
-const optionsEnglish = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': 'f6ecb975d7msh2261e06589e3676p19964fjsndd30636c56c4',
-        'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
-    }
-};
+// const urlE = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/`;
+// // const urlE = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/символ кандзи`;
+// const optionsEnglish = {
+//     method: 'GET',
+//     headers: {
+//         'X-RapidAPI-Key': 'f6ecb975d7msh2261e06589e3676p19964fjsndd30636c56c4',
+//         'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
+//     }
+// };
 
-// const r = encodeURI(`https://jffhwufghure.com/親`)
+// // const r = encodeURI(`https://jffhwufghure.com/親`)
 
-let store = {
-    character: '1',
-    kanji: {
-        video: {
-            mp4: '',
-            poster: ''
-        }
-    }
-};
+// let store = {
+//     character: '1',
+//     kanji: {
+//         video: {
+//             mp4: '',
+//             poster: ''
+//         }
+//     }
+// };
 
-const fetchData = async () => {
-    const word = document.getElementById('input-word')
+// const fetchData = async () => {
+//     const word = document.getElementById('input-word')
 
-    const response = await fetch(url+word.value, options);
-    const data = await response.json();
-    console.log(data[0].kanji.character)
+//     const response = await fetch(url+word.value, options);
+//     const data = await response.json();
+//     console.log(data[0].kanji.character)
 
-    // const {
-    //     character
-    // } = data[0].kanji
+//     // const {
+//     //     character
+//     // } = data[0].kanji
 
-    console.log(data[0].kanji.character);
+//     console.log(data[0].kanji.character);
 
-    store = {
-        ...store,
-        character: data[0].kanji.character
-    }
+//     store = {
+//         ...store,
+//         character: data[0].kanji.character
+//     }
 
-    console.log(store)
+//     console.log(store)
 
-    pump.innerHTML = data[0].kanji.character
+//     pump.innerHTML = data[0].kanji.character
 
-    const responseEnglish = await fetch(urlE+data[0].kanji.character, optionsEnglish);
-	const result = await responseEnglish.json();
+//     const responseEnglish = await fetch(urlE+data[0].kanji.character, optionsEnglish);
+// 	const result = await responseEnglish.json();
 
-    console.log(result)
+//     console.log(result)
 
-    const {
-        kanji: {
-            video: {
-                mp4,
-                poster
-            }
-        }
-    } = result
-    console.log(mp4)
-    console.log(poster)
+//     const {
+//         kanji: {
+//             video: {
+//                 mp4,
+//                 poster
+//             }
+//         }
+//     } = result
+//     console.log(mp4)
+//     console.log(poster)
 
-    pump.innerHTML = `<img src ="${poster}"/>`
+//     pump.innerHTML = `<img src ="${poster}"/>`
 
-    word.value =""
-};
+//     word.value =""
+// };
 
-const markup = () => {
-    const {character} = store;
-    return ` <div>${character}</div>`
-}
+// const markup = () => {
+//     const {character} = store;
+//     return ` <div>${character}</div>`
+// }
 
 // const renderComponent = () => {
 //     root.innerHTML = markup();
@@ -104,15 +104,15 @@ const markup = () => {
 // console.log(character)
 
 
-const fetchDataEnglish = async() => {
+// const fetchDataEnglish = async() => {
     
-    const response = await fetch(EncodeURL, optionsEnglish);
-	const result = await response.json();
-    console.log(result)
-}
+//     const response = await fetch(EncodeURL, optionsEnglish);
+// 	const result = await response.json();
+//     console.log(result)
+// }
 
-const buttonClick = document.getElementById("input")
-buttonClick.addEventListener('click', fetchData)
+// const buttonClick = document.getElementById("input")
+// buttonClick.addEventListener('click', fetchData)
 // word.value=""
 // buttonClick.setAttribute('value', "")
 
@@ -125,14 +125,15 @@ const image = async() => {
 
 }
 
-
+//Клинок рассекающий демонов
 const news = async() => {
-    const responseq = await fetch(`https://animechan.xyz/api/random`)
+    const responseq = await fetch("https://animechan.xyz/api/random/anime?title=Demon Slayer")
     const resultw = await responseq.json()
     console.log(resultw)
 
     // pump.innerHTML = `<img src ="${result.results[0].source_url}"/>`
 };
+
 
 const imageWaifu = async() => {
     const responseq = await fetch(`https://api.waifu.pics/sfw/waifu`)
@@ -149,6 +150,35 @@ const fact = async() => {
 
     // pump.innerHTML = `<img src ="${result.results[0].source_url}"/>`
 };
+const translate = async() => {
+const res = await fetch('https://nekos.best/api/v2/neko')
+
+
+const result = await res.json()
+console.log(result)
+}
+
+// translate()
+
+// news()
+
+const db = async() => {
+    let i = 0
+    const response = await fetch("../db.json")
+    const result = await response.json()
+    console.log(result)
+    while (i<result.length){
+        if (result[i].name == "Nezuko"){
+            console.log(result[i].info, result[i].img)
+            break
+        }
+        i++
+    }
+
+
+}
+db()
+// console.log(await res.json());
 
 // var size = 80 * 25;
 // var b = [];
