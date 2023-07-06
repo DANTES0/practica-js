@@ -124,12 +124,18 @@ document.getElementById('third-btn').addEventListener('click', function() {
   
   revealText(text, '.text-about', 5, 500, alphabet)
 
+
 //   const quotesName = document.getElementById("name-quotes")
+//   const quotesText = document.getElementById("text-quotes")
+//   document.addEventListener("click", function(){
+//     quotes()
+//   })
 
 //   const quotes = async() => {
 //     const response = await fetch("https://animechan.xyz/api/random/anime?title=Demon Slayer")
 //     const result = await response.json()
 //     console.log(result)
+//     quotesName.innerHTML = result.character
+//     quotesText.innerHTML = result.quote
 //   }
-
 // quotes()
