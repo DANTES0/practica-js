@@ -36,6 +36,15 @@ body {
     margin-bottom: 10px;
 }
 
+.burger-menu a {
+    text-shadow: 0px 0px salmon, 0px 0px salmon, 0px 0px salmon,  0px 0px salmon;
+  }
+
+.burger-menu a:hover {
+    text-shadow: -3px 3px salmon, -2px 2px salmon, 0px 0px salmon, 0px 0px salmon;
+    transition: all 0.1s ease;
+ }
+
 #check-menu {
     display: none;
 }

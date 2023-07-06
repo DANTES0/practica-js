@@ -29,6 +29,15 @@ body {
     z-index: 2;
 }
 
+.burger-menu a {
+    text-shadow: 0px 0px salmon, 0px 0px salmon, 0px 0px salmon,  0px 0px salmon;
+  }
+
+.burger-menu a:hover {
+    text-shadow: -3px 3px salmon, -2px 2px salmon, 0px 0px salmon, 0px 0px salmon;
+    transition: all 0.1s ease;
+ }
+
 .menu-burger {
     width: 39px;
     height: 24px;
