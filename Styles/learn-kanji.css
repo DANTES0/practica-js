@@ -556,3 +556,20 @@ html::-webkit-scrollbar-thumb {
 .last-nav {
     border-bottom: 1px solid white;
 }
+
+.nothingText-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NothingText {
+    color: #FFF;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    /* text-align: center; */
+}

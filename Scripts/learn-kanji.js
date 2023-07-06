@@ -99,6 +99,8 @@ function revealText(text, selector, n_changes, duration_milliseconds, charset) {
   
   revealText(text, '.text-main', 5, 500, alphabet)
 
+  let checkOnDestroy = 0
+
   const url = `https://kanjialive-api.p.rapidapi.com/api/public/search/advanced/?kem=`;
 // const url = `https://kanjialive-api.p.rapidapi.com/api/public/search/advanced/?kem=английское слово`;
     const options = {
@@ -156,7 +158,20 @@ const fetchData = async () => {
 
     const response = await fetch(url+word.value, options);
     const data = await response.json();
-
+    const searchWarning = document.getElementById('kanji-wrapper')
+    console.log(data)
+    if (data.length == 0) {
+        searchWarning.innerHTML = `<div id='destroy' class="nothingText-wrapper">
+        <div class="NothingText">Нет результатов</div>
+    </div>` 
+    const destroy = document.getElementById('destroy')
+    checkOnDestroy = 1
+    } else {
+    if (checkOnDestroy == 1){
+        destroy.remove()
+        checkOnDestroy = 0
+    }
+    
     console.log(data[i].kanji.character);
     console.log(data.length)
     while (i < data.length){
@@ -345,7 +360,7 @@ const fetchData = async () => {
     // pump.innerHTML = `<img src ="${poster}"/>`
     i++;
     word.value =""
-}}
+}}}
 
 
 
