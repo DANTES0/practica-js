@@ -26,12 +26,23 @@ const nameMainCharacters = ['Танджиро Камадо', 'Незуко Ка�
 const firstText = document.getElementById('first-text')
 const firstImg = document.getElementById('first-img')
 const firstName = document.getElementById('first-name')
+const mainBorder = document.getElementById('main-border')
 let countMainClick = 0
 document.getElementById('first-btn').addEventListener('click', function() {
   console.log('сработало нажатие')
   countMainClick++
   if (countMainClick != 5){
-    firstImg.style.backgroundImage = `url(${imageMainCharacters[countMainClick]})`
+    firstImg.style.opacity = '0'
+    mainBorder.style.opacity = '0'
+    mainBorder.style.transition = '0.3 all'
+    firstImg.style.transition = '0.3s all'
+    setTimeout(() => {
+      changeImg(firstImg, imageMainCharacters, countMainClick)
+    }, 200)
+    setTimeout(() => {
+      changeOpacity(firstImg, mainBorder)
+    }, 1200)
+    // firstImg.style.backgroundImage = `url(${imageMainCharacters[countMainClick]})`
     firstText.innerHTML = textMainCharacters[countMainClick]
     firstName.innerHTML = nameMainCharacters[countMainClick]
   } else {
@@ -45,11 +56,22 @@ const hashiroName = ['Гёмей Химеджима', 'Кёджуро Ренго
 const hashiroImage = ['../img/stolp.png', '../img/rengoku.png', '../img/tengen.png','../img/tomioko.png', '../img/kanrodji.png', '../img/iguro.png', '../img/sanemi.png', '../img/muichiro.png', '../img/kocho.png']
 const secondImg = document.getElementById('second-img')
 const secondName = document.getElementById('second-name')
+const hashiroBorder = document.getElementById('hashiro-border')
 let countHashiroClick = 0
 document.getElementById('second-btn').addEventListener('click', function() {
   countHashiroClick++
   if (countHashiroClick != 9) {
-    secondImg.style.backgroundImage = `url(${hashiroImage[countHashiroClick]})`
+    secondImg.style.opacity = '0'
+    hashiroBorder.style.opacity = '0'
+    hashiroBorder.style.transition = '0.3 all'
+    secondImg.style.transition = '0.3s all'
+    setTimeout(() => {
+      changeImg(secondImg, hashiroImage, countHashiroClick)
+    }, 200)
+    setTimeout(() => {
+      changeOpacity(secondImg, hashiroBorder)
+    }, 1200)
+    // secondImg.style.backgroundImage = `url(${hashiroImage[countHashiroClick]})`
     secondName.innerHTML = hashiroName[countHashiroClick]
   } else {
     countHashiroClick = -1
@@ -58,6 +80,7 @@ document.getElementById('second-btn').addEventListener('click', function() {
 
 const demonName =['Аказа', 'Гютаро', 'Энму', 'Руи']
 const demonImage = ['../img/akaza.png', '../img/gitaro.png', '../img/enmu.png', '../img/rui.png']
+const demonBorder = document.getElementById('demon-border')
 const thirdImg = document.getElementById('third-img')
 const thirdName = document.getElementById('third-name')
 let countDemonClick = 0 
@@ -65,13 +88,29 @@ let countDemonClick = 0
 document.getElementById('third-btn').addEventListener('click', function() {
   countDemonClick++
   if (countDemonClick != 4) {
-    thirdImg.style.backgroundImage = `url(${demonImage[countDemonClick]})`
+    thirdImg.style.opacity = '0'
+    demonBorder.style.opacity = '0'
+    demonBorder.style.transition = '0.3 all'
+    thirdImg.style.transition = '0.3s all'
+    setTimeout(() => {
+      changeImg(thirdImg, demonImage, countDemonClick)
+    }, 200)
+    setTimeout(() => {
+      changeOpacity(thirdImg, demonBorder)
+    }, 1200)
     thirdName.innerHTML = demonName[countDemonClick]
   } else {
     countDemonClick = -1
   }
 })
 
+function changeOpacity(img, border) {
+  img.style.opacity = '1'
+  border.style.opacity = '1'
+}
+function changeImg(idImg, nameImg, count) {
+  idImg.style.backgroundImage = `url(${nameImg[count]})`
+}
 
   function revealText(text, selector, n_changes, duration_milliseconds, charset) {
     let element = document.querySelector(selector)
