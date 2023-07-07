@@ -1,4 +1,4 @@
-document.getElementById('burger-line-wrapper').addEventListener('click', function() {
+document.getElementById('burger-text-menu-wrapper').addEventListener('click', function() {
     const checker = document.getElementById('check-menu')
     const burgerMenu = document.getElementById('burger-menu')
     console.log(burgerMenu)

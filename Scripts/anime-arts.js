@@ -108,12 +108,12 @@ document.getElementById('waifuBtn').addEventListener('click', function() {
   imgWaifu.style.opacity = '0'
   setTimeout(changeOpacityWaifu, 1200)
 })
-
-document.getElementById('burger-line-wrapper').addEventListener('click', function() {
+document.getElementById('burger-text-menu-wrapper').addEventListener('click', function() {
   const checker = document.getElementById('check-menu')
   const burgerMenu = document.getElementById('burger-menu')
   const name = document.getElementById('page-name')
   const japanFlag = document.getElementById('japan-flag')
+
   if (!checker.checked) {
     name.textContent = 'Японская атмосфера';
     japanFlag.style.display = 'block'  
