@@ -76,7 +76,6 @@ section {
 
 .accordion-item {
     background-color: #000000;
-    cursor: pointer;
 
 }
 .accordion-item hr {
@@ -129,6 +128,7 @@ section {
 }
 .arrow {
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .flex-text {
