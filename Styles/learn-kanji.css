@@ -27,7 +27,7 @@ body {
 }
 .text-main {
     width: 100%;
-    height: 300px;
+    height: 370px;
     color: #FFF;
     font-size: 11px;
     font-family: Better VCR;
@@ -37,10 +37,28 @@ body {
     padding-left: 10px;
     padding-top: 14px;
     overflow: auto;
+    line-height: 15px;
+    text-align: justify;
+    overflow-x: hidden;
+}
+
+.text-main::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+.text-main::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+.text-main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #000000, #a7a5a5);
 }
 
 .white-line{
-    height: 314px;
+    height: 385px;
     width: 1px;
     background-color: #FFF;
 }
@@ -262,7 +280,7 @@ hr {
     font-weight: 400;
     line-height: normal; 
  }
- 
+
 
  .kanji-about-speaking-onyomi-wrapper{
     display: flex;

@@ -269,7 +269,7 @@ const fetchData = async () => {
             <div class="kanji-about-audio">
                 <div class="kanji-about-audio-name-wrapper">
                     <div class="kanji-about-audio-name">
-                        Примеры с звуковыми дрожками
+                        Примеры использования в речи
                     </div>
                 </div>
                 <div class="kanji-about-audio-examples-wrapper">
