@@ -33,12 +33,34 @@ html::-webkit-scrollbar-thumb {
     font-family: Better VCR;
     margin: 40px;
     text-indent: 20px;
+    line-height: 27px;
+    text-align: justify;
+    overflow-y: auto;
+    overflow-x: hidden;
+
 
 }
+.text-about::-webkit-scrollbar {
+  width: 5px;
+}
+
+.text-about::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.text-about::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #000000, #a7a5a5);
+}
+
 
 .text-container{
     width: 100%;
-    height: 525px;
+    height: 595px;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
 }
 
 .text-about p{
@@ -47,7 +69,7 @@ html::-webkit-scrollbar-thumb {
 .text-about {
     box-shadow: inset 0 0 0 4px white;
     position: relative;
-    
+    height: 459px;
     padding: 2em;
   }
   
@@ -63,8 +85,8 @@ html::-webkit-scrollbar-thumb {
     bottom: 0;
     left: 2em;
     
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
   }
   
   
@@ -74,8 +96,8 @@ html::-webkit-scrollbar-thumb {
     bottom: 2em;
     left: 0;
     
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
   }
 
 .text-wrapper{
@@ -255,8 +277,8 @@ hr{
     bottom: 0;
     left: 2em;
     
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
   }
   
   
@@ -266,8 +288,8 @@ hr{
     bottom: 2em;
     left: 0;
     
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
   }
 
 /* /// */
@@ -303,8 +325,8 @@ hr{
     bottom: 0;
     left: 2em;
     
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
   }
   
   
@@ -314,8 +336,8 @@ hr{
     bottom: 2em;
     left: 0;
     
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
   }
 
   .ch-name2{
@@ -398,7 +420,7 @@ hr{
     display: flex;
     width: 50%;
     margin-top: 30px;
-    height: 130px;
+    height: 100%;
 
   }
   
@@ -414,8 +436,8 @@ hr{
     bottom: 0;
     left: 2em;
     
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
   }
   
   
@@ -425,14 +447,15 @@ hr{
     bottom: 2em;
     left: 0;
     
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
   }
   .trailer-info-container{
     width: 100%;
-    height: 350px;
+    height: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .player-wrapper {
@@ -445,3 +468,4 @@ hr{
 #third-img {
     background-image: url('../img/akaza.png');
 }
+

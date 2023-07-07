@@ -21,10 +21,20 @@ body{
     height: 71px; 
 }
 
+.general-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* flex: 1 0 auto; */
+    /* flex-grow: 1; */
+}
+
 .info{
-    position: relative;
+    /* position: relative;
     right: -20px; 
-    top: -100px; 
+    top: -100px;  */
     height: 100px;
     width: 840px;
     color: rgb(0, 0, 0);
@@ -77,9 +87,9 @@ body{
 }
 
 .menu{
-    position: relative;
+    /* position: relative;
     right: 20px; 
-    top: 90px; 
+    top: 90px;  */
     text-align: end;
 }
 
@@ -118,17 +128,9 @@ pre {
 	font-weight: bold;
     color: #4273C1;
 }
-address {
-	/* background: #000; */
-	bottom: 10px;
-	font-family: Georgia, serif;
-	font-style: normal;
-	position: absolute;
-	right: 10px;
-	text-align: right;
-}
 
-.fire {
+
+/* .fire {
     position: relative;
     top: 110px;
     height: 300px;
@@ -136,7 +138,7 @@ address {
     word-wrap: break-word;
     overflow:hidden;
     user-select: none;
-}
+} */
 
 .menu a {
     text-shadow: 0px 0px salmon, 0px 0px salmon, 0px 0px salmon,  0px 0px salmon;
@@ -184,3 +186,28 @@ a:hover::after{
     }
   } */
 
+  .img-conteiner{
+    width: 100%;
+    height: 100%;
+    /* display: table; */
+    flex: 0 0 auto;
+}
+
+.mountains{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    /* flex: 0 0 auto; */
+    
+
+}
+
+.real-general-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%;
+    height: 100%; */
+    flex-grow: 1;
+    
+}
