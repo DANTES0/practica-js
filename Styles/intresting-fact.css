@@ -13,9 +13,10 @@ body {
 
 
 .text-wrapper {
-    height: 30%;
+    height: 265px;
     width: 100%;
     border-bottom: solid 1px white;
+    overflow-y: auto;
 }
 
 .text-fact {
@@ -27,6 +28,10 @@ body {
     line-height: normal;
     padding: 20px;
     text-indent: 20px;
+    line-height: 25px;
+    text-align: justify;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 *,
@@ -37,6 +42,20 @@ body {
     box-sizing: inherit;
 }
 
+.text-wrapper::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+.text-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+.text-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #000000, #a7a5a5);
+}
 
 /*Section used for centering process*/
 section {
