@@ -164,11 +164,11 @@ function changeImg(idImg, nameImg, count) {
   revealText(text, '.text-about', 5, 500, alphabet)
 
 
-//   const quotesName = document.getElementById("name-quotes")
-//   const quotesText = document.getElementById("text-quotes")
-//   document.addEventListener("click", function(){
-//     quotes()
-//   })
+  const quotesName = document.getElementById("name-quotes")
+  const quotesText = document.getElementById("text-quotes")
+  document.addEventListener("click", function(){
+    quotes()
+  })
 
 //   const quotes = async() => {
 //     const response = await fetch("https://animechan.xyz/api/random/anime?title=Demon Slayer")

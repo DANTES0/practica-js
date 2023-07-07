@@ -201,7 +201,8 @@ body {
 
 .text-main-anime1 {
     width: 95%;
-    height: 50%;
+    height: 600px;
+    /* height: 50%; */
     color: #FFF;
     font-size: 18px;
     font-family: Better VCR;
@@ -211,11 +212,15 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     text-indent: 20px;
+    overflow-y: auto;
+    text-align: justify;
+    line-height: 25px;
 }
+
 
 .big-border-center{
     background-color: #FFF;
-    height: 1073px;
+    /* height: 1241px; */
     width: 1px  ;
 }
 
@@ -247,13 +252,13 @@ hr {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 50%;
+    width: 100%;
 }
 
 .api-anime1-img {
     margin-top: 50px;
-    height: 500px;
-    width: 550px;
+    height: 30%;
+    width: 60%;
     box-shadow: -15px 15px #F08E8E;
     margin-bottom: 50px;
     object-fit: fill;
@@ -294,14 +299,14 @@ hr {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 50%;
+    width: 100%;
 }
 
 
 .api-anime2-img {
     margin-top: 50px;
-    height: 500px;
-    width: 550px;
+    height: 30%;
+    width: 60%;
     box-shadow: 15px 15px #4273C1;
     margin-bottom: 50px;
     object-fit: fill;
@@ -347,7 +352,7 @@ hr {
 
 .text-main-anime2 {
     width: 95%;
-    height: 50%;
+    height: 600px;
     color: #FFF;
     font-size: 18px;
     font-family: Better VCR;
@@ -357,6 +362,9 @@ hr {
     padding-top: 20px;
     padding-bottom: 20px;
     text-indent: 20px;
+    overflow-y: auto;
+    text-align: justify;
+    line-height: 25px;
 }
 
 html::-webkit-scrollbar {
