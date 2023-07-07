@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Better VCR;
+    src: url(../fonts/better-vcr_0.ttf);
+}
+
+body{
+    margin: 0;   /*внешний отступ*/
+    padding: 0;  /*внутренний отступ*/
+    background: #000;
+	color: #232323;
+	height: 100%;
+	width: 100%;
+}
+
+.marquee-container{
+    display: flex;
+    align-items: center;
+    background: #000000;
+    overflow: hidden;
+    border-bottom: none  ; 
+    height: 71px; 
+}
+
+.info{
+    position: relative;
+    right: -20px; 
+    top: -100px; 
+    height: 100px;
+    width: 840px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+    -webkit-text-stroke: 0.4px #FFFFFF;
+    text-indent: 20px;
+
+}
+
+.border {
+    height: 1px;
+    /* width: 100%; */
+    background-image: linear-gradient(90deg, #ffffff, #ffffff 75%, transparent 75%, transparent 100%);
+    background-size: 20px 1px;
+    border: none;
+  }
+
+
+.marquee{
+    margin-top: 55px;
+    white-space: nowrap;
+    color: black;
+    text-shadow: 3px 4px 2px rgba(255, 205, 205, 0.25);
+    -webkit-text-stroke: 0.4px #FFFFFF;
+    font-size: 40px;
+    user-select: none;
+    font-family: Better VCR;
+    /* font-family: Kanit; */
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    animation: marquee 12s infinite linear;
+}
+
+.marquee:after{
+    content: " → Японская атмосфера → 和の雰囲気 → Японская атмосфера → 和の雰囲気 → Японская атмосфера";
+}
+
+@keyframes marquee{
+    0% {
+        transform: translateX(-50.8%)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.menu{
+    position: relative;
+    right: 20px; 
+    top: 90px; 
+    text-align: end;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Better VCR;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+
+.menu li{
+    list-style-type: none; 
+    margin-bottom: 1em;
+}
+
+table,
+td,
+pre {
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+
+}
+body{
+	/* background: #000; */
+	/* color: #232323; */
+	height: 100%;
+	width: 100%;
+}
+pre {
+    /* position: sticky; */
+    /* bottom: 0; */
+	font-weight: bold;
+    color: #4273C1;
+}
+address {
+	/* background: #000; */
+	bottom: 10px;
+	font-family: Georgia, serif;
+	font-style: normal;
+	position: absolute;
+	right: 10px;
+	text-align: right;
+}
+
+.fire {
+    position: relative;
+    top: 110px;
+    height: 300px;
+    width: 100%;
+    word-wrap: break-word;
+    overflow:hidden;
+    user-select: none;
+}
+
+.menu a {
+    text-shadow: 0px 0px salmon, 0px 0px salmon, 0px 0px salmon,  0px 0px salmon;
+  }
+
+.menu a:hover {
+    text-shadow: -1px -1px salmon, 2px 2px salmon, 3px 3px salmon, 4px 4px salmon;
+    transition: all 0.1s ease;
+ }
+/* .list_menu{
+    transform: translatex(-50%) translatey(-50%);
+  }
+
+a::after{
+content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+a:hover::after{
+    width: 100%;
+
+} */
+
+
+
+/* .menu .wvc a{
+    animation-name:wave-effect;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    display:inline-block;
+    font-weight:inherit;
+    font-style:inherit;
+  }
+  @keyframes wave-effect{
+    from {
+      transform:translate(0px, .5em);
+    }
+    to {
+      transform:translate(0px, -.5em);
+    }
+  } */
+
