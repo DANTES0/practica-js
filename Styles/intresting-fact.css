@@ -104,8 +104,23 @@ body {
     overflow: hidden;
     z-index: 999;
     /* overflow-x: auto; */
-    /* overflow-y: auto; */
+    overflow-y: auto;
     transition: .5s all;
+}
+
+.burger-menu::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+.burger-menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+.burger-menu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #000000, #a7a5a5);
 }
 
 .burger-menu-nav {
@@ -118,7 +133,7 @@ body {
     border-bottom: 1px dashed white;
     background-color: black;
     color: #FFF;
-    font-size: 63px;
+    font-size: 45px;
     font-family: Better VCR;
     font-style: normal;
     font-weight: 400;

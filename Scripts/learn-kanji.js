@@ -38,7 +38,7 @@ document.getElementById('burger-line-wrapper').addEventListener('click', functio
         japanFlag.style.display = 'block'  
         name.style.textShadow ='-3px 3px #558ABB'  
         checker.checked = true
-        burgerMenu.style.maxHeight = '100vh'
+        burgerMenu.style.maxHeight = '80vh'
     } else {
         checker.checked = false
         burgerMenu.style.maxHeight = '0'
