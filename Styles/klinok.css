@@ -409,7 +409,7 @@ hr{
     width: 5%;
     margin-top: auto;
     transform: scale(-1, 1);
-    margin-left: 140px;
+    /* margin-left: 140px; */
     z-index: 4;
 
 }
@@ -599,7 +599,7 @@ hr{
   }
 }
 
-@media (max-width: 1281px) {
+@media (max-width: 1282px) {
   .ch-left-text {
     font-size: 20px;
   }
@@ -629,7 +629,7 @@ hr{
   }
 }
 
-@media (max-width: 864px) {
+@media (max-width: 865px) {
   .ch-left-text {
     font-size: 14px;
   }
