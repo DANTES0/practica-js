@@ -255,6 +255,7 @@ hr{
     text-indent: 20px;
     width:50%;
     margin-left: 120px;
+    height: 418px;
 
 }
 
@@ -294,6 +295,14 @@ hr{
 
 /* /// */
 
+.ch-info1{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
   .ch-left-text{
     color: #FFF;
     font-size: 23px;
@@ -301,7 +310,7 @@ hr{
     margin: 40px;
     text-indent: 20px;
     width: 50%;
-    /* height: auto; */
+    height: 450px;
     /* margin-left: 120px; */
 
 }
@@ -364,15 +373,15 @@ hr{
 }
 
 .ch-right{
-    /* display: flex; */
-    justify-content: left;
-    width: 25%;
+    display: flex;
+    justify-content: right;
+    width: 350px;
     height: 100%;
 }
 
 .ch-img2{
     background-image: url('../img/stolp.png') ;
-    width: 100%;
+    width: 350px;
     height: 500px;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -469,3 +478,180 @@ hr{
     background-image: url('../img/akaza.png');
 }
 
+@media (max-width: 1420px) {
+  .ch-right-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1385px) {
+  .ch-right-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .ch-right-text {
+    font-size: 19px;
+    /* margin-right: 110px; */
+  }
+}
+
+@media (max-width: 1180px) {
+  .ch-right-text {
+    font-size: 19px;
+    /* margin-right: 110px; */
+  }
+  .ch-img {
+    width: 292px;
+  }
+  .ch-arrows {
+    position: relative;
+    left: 50px;
+  }
+}
+
+@media (max-width: 1051px) {
+  .ch-right-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 980px) {
+  .ch-right-text {
+    font-size: 17px;
+  }
+}
+@media (max-width: 970px) {
+  .ch-right-text {
+    font-size: 16px;
+  }
+  .ch-arrows {
+    /* position: relative; */
+    left: 70px;
+  }
+}
+
+@media (max-width: 945px) {
+  .ch-right-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 910px) {
+  .ch-right-text {
+    font-size: 15px;
+  }
+
+  .ch-arrows {
+    /* position: relative; */
+    left: 80px;
+  }
+}
+
+@media (max-width: 850px) {
+  .ch-arrows {
+    /* position: relative; */
+    left: 90px;
+  }
+}
+
+@media (max-width: 801px) {
+  .ch-arrows {
+    /* position: relative; */
+    left: 100px;
+  }
+
+  .ch-right-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 770px) {
+  .ch-arrows {
+    /* position: relative; */
+    left: 100px;
+  }
+
+  .ch-right-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 735px) {
+  .ch-arrows {
+    /* position: relative; */
+    left: 120px;
+  }
+
+  .ch-right-text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1410px) {
+  .ch-left-text {
+    font-size: 21px;
+  }
+}
+@media (max-width: 1310px) {
+  .ch-left-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1281px) {
+  .ch-left-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1175px) {
+  .ch-left-text {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 1015px) {
+  .ch-left-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 983px) {
+  .ch-left-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 935px) {
+  .ch-left-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 864px) {
+  .ch-left-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 805px) {
+  .ch-left-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 793px) {
+  .ch-left-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 756px) {
+  .ch-left-text {
+    font-size: 11.2px;
+  }
+  .ch-right {
+    width: 300px;
+  }
+}

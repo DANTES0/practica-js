@@ -147,11 +147,12 @@ hr {
  }
 
  .kanji-word{
-    width: 250px;
+    width: 15%;
     height: 100%;
     /* border-right: 1px solid white; */
  }
  .kanji-name {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -185,6 +186,7 @@ hr {
  }
 
  .kanji-table-wrapper {
+    width: 100%;
     height: 200px;
  }
 
@@ -427,4 +429,99 @@ html::-webkit-scrollbar-thumb {
     font-style: normal;
     font-weight: 400;
     /* text-align: center; */
+}
+
+@media (max-width: 1300px) {
+    .kanji-about-grammar-steps {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .kanji-about-grammar-steps {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .kanji-about-grammar-steps {
+        height: 15px;
+        width: 15px;
+    }
+    .kanji-name {
+        font-size: 15px;
+    }
+    .kanji-name-character {
+        font-size: 25px;
+    }
+    .kanji-table-name {
+        font-size: 15px;
+    }
+    .kanji-ul {
+        font-size: 15px;
+    }
+    .kanji-about-grammar-arrow {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .kanji-about-audio-examples-text-column {
+        font-size: 15px;
+    }
+    .kanji-about-grammar {
+        font-size: 15px;
+    }
+    .kanji-about-speaking-onyomi-name {
+        font-size: 15px;
+    }
+    .kanji-about-speaking-konyomi-name {
+        font-size: 15px;
+    }
+    .kanji-about-audio-name {
+        font-size: 15px;
+    }
+    .kanji-ul {
+        font-size: 10px;
+    }
+    .kanji-name-character {
+        font-size: 25px;
+    }
+    .kanji-name-kanji {
+        font-size: 10px;
+    }
+    .kanji-about-audio-examples-play {
+        width: 30px;
+        height: 30px;
+    }
+    .kanji-about-grammar-arrow {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 810px) {
+    .kanji-about-audio-examples-text-column {
+        font-size: 10px;
+    }
+    .kanji-about-grammar {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 760px) {
+    .kanji-about-grammar-steps {
+        height: 10px;
+        width: 10px;
+    }
+    .kanji-about-audio-examples-play {
+        object-fit: contain;
+        width: 25px;
+        height: 25px;
+        background-size: 25px;
+    }
+    .kanji-table-name {
+        font-size: 10px;
+    }
 }

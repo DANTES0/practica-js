@@ -169,6 +169,7 @@ a:hover::after{
   .img-conteiner{
     width: 100%;
     height: 100%;
+    z-index: 2;
     /* display: table; */
     /* flex: 0 0 auto; */
 }
@@ -195,4 +196,41 @@ a:hover::after{
 
 .main-container {
     min-height: calc(100vh - 399px);
+}
+
+.sun {
+    height: 150px;
+    width: 150px;
+    background-color: #F04A4A;
+    border-radius: 75px;
+    position: absolute;
+    z-index: -1;
+    /* transform: rotate(90deg); */
+    /* transition: transform 10s all; */
+    animation: move 15s infinite alternate;
+    /* box-shadow: 5px -5px 5px -5px blue; */
+}
+
+
+/* .sun::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0;
+    border-radius: 50%;
+  } */
+
+
+@keyframes move {
+    0% {
+        /* transform: rotate(0deg); */
+        left: 0px;
+    }
+    100% {
+        left: calc(100% - 150px);
+        /* transform: rotate(90deg); */
+    }
 }
