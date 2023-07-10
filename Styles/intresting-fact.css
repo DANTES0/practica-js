@@ -2,6 +2,9 @@
     font-family: Better VCR;
     src: url(../fonts/better-vcr_0.ttf);
 }
+*{
+    cursor: url(../img/cursor.png), auto;
+}
 
 body {
     width: 100%;
@@ -124,11 +127,11 @@ section {
     padding-left: 20px;
 }
 .flex-text {
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
 }
 .arrow {
     padding-right: 20px;
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
 }
 
 .flex-text {

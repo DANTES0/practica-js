@@ -4,18 +4,21 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
     console.log(burgerMenu)
     const name = document.getElementById('page-name')
     const japanFlag = document.getElementById('japan-flag')
+    const arrowUp = document.getElementById('arrow-up')
     if (!checker.checked) {
         name.textContent = 'Японская атмосфера';
         japanFlag.style.display = 'block'  
         name.style.textShadow ='-3px 3px #558ABB'  
         checker.checked = true
         burgerMenu.style.maxHeight = '80vh'
+        arrowUp.style.display = 'none'
     } else {
         checker.checked = false
         burgerMenu.style.maxHeight = '0'
         name.textContent = 'Факты о Японии';
         name.style.textShadow = 'none'
         japanFlag.style.display = 'none'
+        arrowUp.style.display = 'block'
       }
   
   })

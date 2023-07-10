@@ -113,6 +113,7 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
   const burgerMenu = document.getElementById('burger-menu')
   const name = document.getElementById('page-name')
   const japanFlag = document.getElementById('japan-flag')
+  const arrowUp = document.getElementById('arrow-up')
 
   if (!checker.checked) {
     name.textContent = 'Японская атмосфера';
@@ -120,12 +121,14 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
     name.style.textShadow ='-3px 3px #558ABB'  
     checker.checked = true
     burgerMenu.style.maxHeight = '80vh'
+    arrowUp.style.display = 'none'
   } else {
     checker.checked = false
     burgerMenu.style.maxHeight = '0'
     name.textContent = 'Изучение японских иероглифов';
     name.style.textShadow = 'none'
     japanFlag.style.display = 'none'
+    arrowUp.style.display = 'block'
     }
 
 })

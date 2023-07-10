@@ -158,7 +158,7 @@ hr{
 .arrow-quotes{
     outline: none;
     border:none;
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
     background-image: url('../img/arrows.svg') ;
     width: 25px;
     height: 35px;
@@ -231,7 +231,7 @@ hr{
 .ch-arrows{
     outline: none;
     border:none;
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
     background-image: url('../img/arrows.svg') ;
     width: 25px;
     height: 35px;
@@ -397,7 +397,7 @@ hr{
 .ch-center-arrows2{
     outline: none;
     border:none;
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
     background-image: url('../img/arrows.svg') ;
     width: 25px;
     height: 35px;
@@ -472,6 +472,7 @@ hr{
     justify-content: center;
     /* border: 1px white solid; */
     margin-bottom: 30px;
+    cursor: url(../img/cursor-pointer.png), pointer;
 }
 
 #third-img {

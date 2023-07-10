@@ -34,7 +34,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 14px;
     overflow: auto;
     line-height: 15px;
@@ -106,6 +107,7 @@ hr {
     padding: 0 40px;
     margin-left: 23px;
     height: 20px; 
+    cursor: url(../img/cursor-pointer.png), pointer;
 }
 
 .search-bar-input-button {
@@ -340,6 +342,7 @@ hr {
 }
 .kanji-about-audio-examples{
     margin-top: 5px;
+    /* cursor: url(../img/cursor-pointer.png), pointer; */
 }
 .kanji-about-audio-examples-text-column{
     display: flex;
@@ -368,7 +371,7 @@ hr {
     background: url(../img/play-sound.svg);
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
     /* z-index: 0; */
 }
 
