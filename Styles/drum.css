@@ -262,6 +262,7 @@ hr{
   font-size: 24px;
   background: transparent;
   border: none;
+  cursor: url(../img/cursor-pointer.png), pointer; 
   /* position: relative; */
   /* bottom: 0; */
 }
@@ -300,6 +301,23 @@ hr{
   /* margin-left: 120px; */
 
 }
+
+.game-text::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+.game-text::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+
+.game-text::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, black, #4c4c4c);
+} 
 
 .game-text {
   box-shadow: inset 0 0 0 4px white;
@@ -347,9 +365,9 @@ hr{
   z-index: 40;
 }
 
-.cat-bong-etc {
-  /* position: fixed; */
-}
+/* .cat-bong-etc {
+  position: fixed;
+}  */
 
 .bong{
   position: absolute;
