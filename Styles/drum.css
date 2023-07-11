@@ -1,0 +1,199 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+html::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, black, #4c4c4c);
+}
+
+
+.text-about{
+    color: #FFF;
+    font-size: 17px;
+    font-family: Better VCR;
+    /* margin: 40px; */
+    text-indent: 20px;
+    line-height: 19px;
+    text-align: justify;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.text-about::-webkit-scrollbar {
+  width: 5px;
+}
+
+.text-about::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.text-about::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #000000, #a7a5a5);
+}
+
+
+.text-container{
+    /* width: 100%;
+    height: 595px; */
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    background-image: url('../img/drum1.png');
+    width: 100%;
+    height: 1196px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ .text-about p{
+    margin: 40px;
+    /* margin-bottom: 10px; */
+} 
+/* .text-about {
+    box-shadow: inset 0 0 0 4px white;
+    position: relative;
+    height: 459px;
+    padding: 2em;
+  } */
+  
+  /* .text-about:before,
+  .text-about:after {
+    content: '';
+    position: absolute;
+  }
+  
+  .text-about:before {  
+    top: 0;
+    right: 2em;
+    bottom: 0;
+    left: 2em;
+    
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  
+  
+  .text-about:after {  
+    top: 2em;
+    right: 0;
+    bottom: 2em;
+    left: 0;
+    
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+  } */ 
+
+.text-wrapper{
+    height: 100%;
+    width: 100%;
+    /* padding: 30px; */
+}
+
+hr{
+    background-color: #FFF;
+    margin: 0;
+   
+}
+
+.img-container{
+    background-image: url('../img/drum1.png');
+    width: 100%;
+    height: 990px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-wrapper2-part1{
+    width: 100%;
+    height: 330px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.text-wrapper2-part1::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+.text-wrapper2-part1::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+
+.text-wrapper2-part1::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, black, #4c4c4c);
+}
+
+.text-wrapper2-part2{
+    height: 320px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.text-wrapper2-part2::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+
+.text-wrapper2-part2::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+  
+
+.text-wrapper2-part2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, black, #4c4c4c);
+}
+
+.player-wrapper {
+    display: flex;
+    justify-content: center;
+    /* border: 1px white solid; */
+    /* margin-bottom: 30px; */
+    cursor: url(../img/cursor-pointer.png), pointer;
+}
+
+.general-ch{
+    color: #FFF;
+    font-size: 30px;
+    font-family: Better VCR;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
