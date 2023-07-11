@@ -253,11 +253,11 @@ hr{
 
 #start-button {
   position: absolute;
-  left: 260px;
+  left: 225px;
   top: 160px;
   margin-top: auto;
   font-family: Better VCR;
-  width: 200px;
+  width: 250px;
   height: 150px;
   font-size: 24px;
   background: transparent;
