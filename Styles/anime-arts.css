@@ -113,7 +113,7 @@ hr {
     background-color: transparent;
     outline: none;
     border:none;
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
     margin-left: 30px;
     text-shadow: #F08E8E -3px 2px;
     transition: 0.5s all;
@@ -169,7 +169,7 @@ hr {
     background-color: transparent;
     outline: none;
     border:none;
-    cursor: pointer;
+    cursor: url(../img/cursor-pointer.png), pointer;
     margin-right: 50px;
     text-shadow: #4273C1 3px 2px;
     transition: 0.5s all;

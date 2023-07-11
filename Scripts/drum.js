@@ -63,3 +63,210 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
       function stopVideo() {
         player.stopVideo();
       }
+
+
+      
+  var rightDrums = new Audio('../sounds/rightBong.wav')
+  var leftDrums = new Audio('../sounds/leftBong.wav')
+  var meow = new Audio ('../sounds/meow.wav')
+
+  var startButton = document.getElementById('start-button');
+  startButton.addEventListener('click', function() {
+    startGame();
+  });
+  
+  function startGame() {
+      // var drum = document.getElementById('drum');
+  var gameContainer = document.getElementById('game-container');
+  gameContainer.innerHTML = `<div id="hit-zone"></div>
+  <div id="score-display"></div>
+  <div class="cat-bong-etc">
+      <img src="../img/catUpPaws.png" class="cat" id="cat">
+      <img src="../img/bongo.png" class="bong">
+  </div>`
+  var hitZone = document.getElementById('hit-zone');
+  var score = 0;
+  
+  // drum.addEventListener('click', function() {
+  //     score++;
+  //     var balls = document.getElementsByClassName('ball');
+  //     if (balls.length > 0) {
+  //       var ball = balls[0];
+  //       var ballRect = ball.getBoundingClientRect();
+  //       var hitZoneRect = hitZone.getBoundingClientRect();
+  //       if (ballRect.left >= hitZoneRect.left && ballRect.right <= hitZoneRect.right) {
+  //         score += 10;
+  //         gameContainer.removeChild(ball);
+  //       } else {
+  //         score -= 5;
+  //       }
+  //     }
+  //   });
+  let ten = 10
+  let speed = 1000
+  let oneHundred = 100
+
+  
+    gameContainer.addEventListener('click', function(event) {
+      if (event.target.classList.contains('ball')) {
+        var ball = event.target;
+        var ballRect = ball.getBoundingClientRect();
+        var hitZoneRect = hitZone.getBoundingClientRect();
+        if (ballRect.left >= hitZoneRect.left && ballRect.right <= hitZoneRect.right) {
+          score += 10;
+          scoreDisplay.textContent = 'Score: ' + Math.round(score);
+          gameContainer.removeChild(ball);
+        } else {
+          score -= 5;
+          if (score < 0) {
+            score = 0;
+          }
+          scoreDisplay.textContent = 'Score: ' + Math.round(score);
+        }
+      } else {
+        score--;
+        if (score < 0) {
+          score = 0;
+        }
+        scoreDisplay.textContent = 'Score: ' + Math.round(score);
+      }
+    });
+  
+  var start = setInterval(function() {
+    // score -= 0.1;
+    if (score < 0) {
+      score = 0;
+    }
+    scoreDisplay.textContent = 'Score: ' + Math.round(score);
+    console.log('Score:', Math.floor(score));
+  }, 10);
+  
+  var createBall = setInterval(function() {
+      var ball = document.createElement('div');
+      ball.className = 'ball';
+      ball.style.backgroundColor = getRandomColor();
+      ball.style.left = gameContainer.offsetWidth + 'px';
+      gameContainer.appendChild(ball);
+      
+      var movement = setTimeout(function() {
+        ball.style.left = '-30px';
+      }, oneHundred);
+      
+      var animationInterval = setInterval(function() {
+        var ballRect = ball.getBoundingClientRect();
+        var hitZoneRect = hitZone.getBoundingClientRect();
+        if (ballRect.right < hitZoneRect.left) {
+          clearInterval(animationInterval);
+          gameContainer.removeChild(ball);
+          score -= 5;
+          scoreDisplay.textContent = 'Score: ' + Math.round(score);
+        }
+      }, ten);
+    }, speed);
+  
+    function getRandomColor() {
+      var colors = ['blue', 'red'];
+      var randomIndex = Math.floor(Math.random() * colors.length);
+      return colors[randomIndex];
+    }
+  
+    // var score = 0;
+    var scoreDisplay = document.getElementById('score-display');
+    var paws = document.getElementById('cat')
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'a' || event.key === 'A' || event.key === 'ф' || event.key === 'Ф') {
+        paws.setAttribute('src', '../img/catUpLeftPaws.png')
+        leftDrums.currentTime = 0
+        leftDrums.play()
+        hitDrum('red');
+      } else if (event.key === 'd' || event.key === 'D' || event.key === 'В' || event.key === 'в') {
+        paws.setAttribute('src', '../img/catDownRightPaws.png')
+        rightDrums.currentTime = 0
+        rightDrums.play()
+        hitDrum('blue');
+      }
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.key === ' ' || event.key === 'Spacebar') {
+        meow.currentTime = 0
+        meow.play()
+      }
+    })
+    document.addEventListener('keyup' ,function(event) {
+      if (event.key === 'a' || event.key === 'A' || event.key === 'ф' || event.key === 'Ф') {
+        if (score < 0) {
+          score = 0;
+        }
+        if (score > 200) {
+          clearInterval(createBall)
+          // clearTimeout(movement)
+          clearInterval(start)
+          rightDrums.remove()
+          leftDrums.remove()
+          score = 0
+          // speed = 0
+          // ten = 0
+          // gameContainer.remove()
+          // gameContainer = document.createElement('div')
+          // gameContainer.id = 'game-container'
+          // document.getElementsByClassName('ball').style.removeProperty('transition')
+          gameContainer.innerHTML = `<div class ='winner-text-wrapper'><div class='winner-text'>Поздравляем вы набрали
+          максимальное количество очков</div>
+          <button id='again-button'></button></div>`
+          const againButton = document.getElementById('again-button')
+          againButton.addEventListener('click', function() {
+            startGame();
+          });
+          // againButton.style.background = `url('../img/againBtn.svg')`
+          // againButton.style.backgroundRepeat = 'no-repeat'
+        }
+        paws.setAttribute('src', '../img/catUpPaws.png')
+        // hitDrum('red');
+      } else if (event.key === 'd' || event.key === 'D' || event.key === 'В' || event.key === 'в') {
+        if (score < 0) {
+          score = 0;
+        }
+        if (score > 200) {
+          clearInterval(createBall)
+          clearInterval(start)
+          rightDrums.remove()
+          leftDrums.remove()
+          score = 0
+          // gameContainer.remove()
+          // gameContainer = document.createElement('div')
+          // gameContainer.id = 'game-container'
+          gameContainer.innerHTML = `<div class = 'winner-text-wrapper'><div class='winner-text'>Поздравляем вы набрали
+          максимальное количество очков</div>
+          <button id='again-button'></button></div>`
+          const againButton = document.getElementById('again-button')
+          againButton.addEventListener('click', function() {
+            startGame();
+          });
+          // const againButton = document.getElementById('start-button')
+          // againButton.style.background = `url('../img/againBtn.svg')`
+          // againButton.style.backgroundRepeat = 'no-repeat'
+        }
+        paws.setAttribute('src', '../img/catUpPaws.png')
+        // hitDrum('blue');
+      }
+    })
+    
+    function hitDrum(color) {
+      // score++;
+      var balls = document.getElementsByClassName('ball');
+      if (balls.length > 0) {
+        var ball = balls[0];
+        var ballRect = ball.getBoundingClientRect();
+        var hitZoneRect = hitZone.getBoundingClientRect();
+        if (ballRect.left >= hitZoneRect.left && ballRect.right <= hitZoneRect.right && ball.style.backgroundColor === color) {
+          score += 10;
+          gameContainer.removeChild(ball);
+        } else {
+          score -= 5;
+        }
+      }
+      scoreDisplay.textContent = 'Score: ' + Math.round(score);
+    }
+  }
+  
+  
