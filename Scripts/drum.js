@@ -197,7 +197,7 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
         if (score < 0) {
           score = 0;
         }
-        if (score > 200) {
+        if (score >= 200) {
           clearInterval(createBall)
           // clearTimeout(movement)
           clearInterval(start)
@@ -226,7 +226,7 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
         if (score < 0) {
           score = 0;
         }
-        if (score > 200) {
+        if (score >= 200) {
           clearInterval(createBall)
           clearInterval(start)
           rightDrums.remove()

@@ -41,9 +41,9 @@ body{
     right: -20px; 
     top: -100px;  */
     height: 100px;
-    width: 850px;
+    width: 65%;
     color: rgb(0, 0, 0);
-    font-size: 25px;
+    font-size: 24px;
     font-family: Better VCR;
     font-style: normal;
     font-weight: 400;
@@ -97,6 +97,7 @@ body{
     top: 90px;  */
     text-align: end;
     z-index: 10;
+    width: 35%;
     /* position: absolute; */
     /* right: 0; */
 }
@@ -104,7 +105,7 @@ body{
 .menu a{
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    font-size: 23px;
     font-family: Better VCR;
     font-style: normal;
     font-weight: 400;
@@ -611,13 +612,17 @@ a:hover::after{
     overflow-y: hidden;
     /* max-width: 1920px; */
   }
-
+  @media (max-width: 1409px) {
+    .menu a {
+        font-size: 19px;
+    }
+  }
   @media (max-width: 1282px) {
     .info {
-        font-size: 23px;
+        font-size: 21px;
     }
     .menu a {
-        font-size: 23px;
+        font-size: 18px;
     }
   }
 
@@ -626,27 +631,27 @@ a:hover::after{
         font-size: 21px;
     }
     .menu a {
-        font-size: 20px;
+        font-size: 16px;
     }
   }
 
   @media (max-width: 1095px) {
     .info {
-        font-size: 21px;
+        font-size: 20px;
     }
+    .menu a {
+      font-size: 16px;
+  }
   }
 
   @media (max-width: 805px) {
     .info {
-        font-size: 20px;
+        font-size: 19px;
     }
   }
 
   @media (max-width: 760px) {
     .info {
         font-size: 19px;
-    }
-    .menu a {
-        font-size: 22px;
     }
   }
