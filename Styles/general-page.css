@@ -138,6 +138,7 @@ body{
 .menu a:hover {
     text-shadow: -1px -1px salmon, 2px 2px salmon, 3px 3px salmon, 4px 4px salmon;
     transition: all 0.1s ease;
+    cursor: url(../img/cursor-pointer.png), pointer;
  }
 /* .list_menu{
     transform: translatex(-50%) translatey(-50%);

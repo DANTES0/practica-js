@@ -199,17 +199,10 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
         }
         if (score >= 200) {
           clearInterval(createBall)
-          // clearTimeout(movement)
           clearInterval(start)
           rightDrums.remove()
           leftDrums.remove()
           score = 0
-          // speed = 0
-          // ten = 0
-          // gameContainer.remove()
-          // gameContainer = document.createElement('div')
-          // gameContainer.id = 'game-container'
-          // document.getElementsByClassName('ball').style.removeProperty('transition')
           gameContainer.innerHTML = `<div class ='winner-text-wrapper'><div class='winner-text'>Поздравляем вы набрали
           максимальное количество очков</div>
           <button id='again-button'></button></div>`
@@ -217,11 +210,8 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
           againButton.addEventListener('click', function() {
             startGame();
           });
-          // againButton.style.background = `url('../img/againBtn.svg')`
-          // againButton.style.backgroundRepeat = 'no-repeat'
         }
         paws.setAttribute('src', '../img/catUpPaws.png')
-        // hitDrum('red');
       } else if (event.key === 'd' || event.key === 'D' || event.key === 'В' || event.key === 'в') {
         if (score < 0) {
           score = 0;
@@ -232,9 +222,6 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
           rightDrums.remove()
           leftDrums.remove()
           score = 0
-          // gameContainer.remove()
-          // gameContainer = document.createElement('div')
-          // gameContainer.id = 'game-container'
           gameContainer.innerHTML = `<div class = 'winner-text-wrapper'><div class='winner-text'>Поздравляем вы набрали
           максимальное количество очков</div>
           <button id='again-button'></button></div>`
@@ -242,12 +229,8 @@ document.getElementById('burger-text-menu-wrapper').addEventListener('click', fu
           againButton.addEventListener('click', function() {
             startGame();
           });
-          // const againButton = document.getElementById('start-button')
-          // againButton.style.background = `url('../img/againBtn.svg')`
-          // againButton.style.backgroundRepeat = 'no-repeat'
         }
         paws.setAttribute('src', '../img/catUpPaws.png')
-        // hitDrum('blue');
       }
     })
     

@@ -79,8 +79,6 @@
 
 #check-menu:checked ~ .burger-text-menu-wrapper .burger-line-wrapper .second {
     transform: rotate(45deg);
-    /* width: 45px; */
-    /* left: 10px; */
 }
 
 #check-menu:checked ~ .burger-text-menu-wrapper .burger-line-wrapper  .third {

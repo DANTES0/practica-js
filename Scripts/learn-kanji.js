@@ -1,6 +1,6 @@
 
 document.getElementsByClassName('search-bar-input')[0]
-    .addEventListener('click', function() { //mouseover
+    .addEventListener('click', function() { 
         const input = document.getElementById('search-bar-input')
         input.style.transition = '1.5s all'
         input.style.width = '740px'
@@ -296,7 +296,6 @@ const fetchData = async () => {
             }
             
             countImages++
-            // console.log(ImagesBlocks)
         }
         console.log(ImagesBlocks)
         document.getElementById(`kanji${i}`).innerHTML = ImagesBlocks
